@@ -26,7 +26,49 @@
     </head>
 
     <body>
-        <h1>Hello Y'all!</h1>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg bg-light container-fluid">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav-list" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Browse</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Create</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign Up</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="footer container-fluid bg-light d-flex justify-content-center mt-auto py-3">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                aria-label="Facebook"><i class="fa-brands fa-facebook social-icon"></i></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                aria-label="Twitter"><i class="fa-brands fa-twitter social-icon"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link"
+                aria-label="Instagram"><i class="fa-brands fa-instagram social-icon"></i></a>
+        </footer>
     </body>
 
 </html>

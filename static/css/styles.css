@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navigation styling */
+
+.nav-list {
+    margin-left: 70%;
+}
+
+.nav-item {
+    margin-left: .8em;
+}
+
+
+/* Footer styling */
+
+.social-icon {
+    color: #000;
+    font-size: 1.5rem;
+    margin: 0 1em;
+}
