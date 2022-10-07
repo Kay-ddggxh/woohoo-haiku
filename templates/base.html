@@ -60,6 +60,18 @@
             </div>
         </nav>
 
+        <!-- Header section -->
+        <header>
+            <h1 class="text-center">Woohoo Haiku</h1>
+        </header>
+
+        <!-- Main content -->
+        <main>
+            {% block content %}
+            <!-- Main content inserted from other templates -->
+            {% endblock content %}
+        </main>
+
         <!-- Footer -->
         <footer class="footer container-fluid bg-light d-flex justify-content-center mt-auto py-3">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link"
