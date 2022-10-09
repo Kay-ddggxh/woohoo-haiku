@@ -13,7 +13,7 @@ class Haiku(models.Model):
     create_date = models.DateField(auto_now_add=True)
     likes = models.ManyToManyField(
         User, related_name='haiku_likes', blank=True)
-    # tag = models.TextChoices()
+    # tag = models.TextChoices() => many to many?
     # bg_image = CloudinaryField('image', default='placeholder')
     # possibly user uploaded image
 
