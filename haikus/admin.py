@@ -20,3 +20,5 @@ class HaikuAdmin(SummernoteModelAdmin):
     search_fields = ['name']    # add tag later
     list_filter = ('approved', 'create_date')   # tag later
     summernote_fields = ('body')
+
+    # possibly add approve method here
