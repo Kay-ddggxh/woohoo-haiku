@@ -6,6 +6,30 @@
     margin: 0;
 }
 
+/* Fonts taken from https://www.dafont.com/ - see README for individual font source */
+
+@font-face {
+    font-family: 'NINJAWARRIOR';
+    src: url(https://res.cloudinary.com/kay-ddggxh/raw/upload/v1665506970/NINJAWARRIOR.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dekiru';
+    src: url(https://res.cloudinary.com/kay-ddggxh/raw/upload/v1665507352/Dekiru.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* change this one !!! */
+@font-face {
+    font-family: 'Kashina';
+    src: url(https://res.cloudinary.com/kay-ddggxh/raw/upload/v1665507325/Kashina.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* General stylinng */
 
 h1,
@@ -15,8 +39,29 @@ h4 {
     text-align: center;
 }
 
+h1 {
+    font-family: 'NINJAWARRIOR';
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: 'Kashina';
+}
+
+h3 {
+    font-family: 'Dekiru';
+}
+
+main {
+    margin: 0 5vw;
+}
 
 /* Navigation styling */
+
+.logo {
+    width: 50px;
+    border-radius: 50%;
+}
 
 .nav-list {
     margin-left: 70%;
@@ -26,8 +71,26 @@ h4 {
     margin-left: .8em;
 }
 
+.nav-link {
+    font-family: 'Dekiru';
+    font-size: 1.5rem;
+}
+
+/* header styling */
+
+
+/* haiku card styling */
+
+
+.haiku-card {}
+
 
 /* Footer styling */
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
 
 .social-icon {
     color: #000;
