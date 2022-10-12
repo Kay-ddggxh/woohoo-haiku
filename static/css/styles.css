@@ -30,7 +30,7 @@
 
 body {
     background-image: url(https://res.cloudinary.com/kay-ddggxh/image/upload/v1665585796/kisspng-plum-blossom-red-plum-5a985745914049.001159381519933253595_o082wi.png);
-    background-size: 35%;
+    background-size: 33vw;
     background-position-x: left;
     background-repeat: no-repeat;
 }
@@ -114,6 +114,10 @@ nav {
     border: 1px solid rgb(223, 223, 223);
     border-radius: 5px;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+    background-image: url(https://res.cloudinary.com/kay-ddggxh/image/upload/v1665595188/koi-sun-wave.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: right;
     background-color: #fff;
 }
 
