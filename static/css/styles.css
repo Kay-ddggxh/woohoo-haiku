@@ -126,12 +126,21 @@ nav {
     transition: ease-in-out 400ms;
 }
 
+/* Haiku Detail styling */
+
+.haiku-content {
+    width: fit-content;
+    padding: 1em;
+    margin: 2rem auto;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Footer styling */
 
 footer {
-    position: fixed;
-    bottom: 0;
     background-color: var(--primary-color);
 }
 

@@ -2,6 +2,10 @@
 
 {% block content %}
 
-<h2>Read Haiku</h2>
+<h2>Read <br>"{{ haiku.title }}"</h2>
+<p class="text-center">by {{ haiku.author }}</p>
+<article class="haiku-content">
+    {{ haiku.content | safe }}
+</article>
 
 {% endblock %}
