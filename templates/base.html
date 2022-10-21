@@ -45,7 +45,7 @@
                 <div class="collapse navbar-collapse nav-list" id="navbarTogglerDemo02">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Browse</a>
+                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Browse</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
@@ -80,7 +80,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer container-fluid d-flex justify-content-center mt-auto py-3">
+        <footer class="footer container-fluid d-flex justify-content-center py-3">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="social-link"
                 aria-label="Facebook"><i class="fa-brands fa-facebook social-icon"></i></a>
             <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link"
