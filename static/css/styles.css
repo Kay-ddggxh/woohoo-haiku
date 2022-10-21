@@ -123,6 +123,11 @@ nav {
     transition: ease-in-out 400ms;
 }
 
+.haiku-card_link {
+    text-decoration: none;
+    color: #000;
+}
+
 /* Haiku Detail styling */
 
 .haiku-content {

@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Haiku, Tanka
+from .forms import TankaForm
 
 
 class HaikuList(generic.ListView):
@@ -27,6 +28,6 @@ class HaikuDetail(View):
                 "tankas": tankas,
                 "tanka_added": False,
                 "liked": liked,
-                # add form for tanka later
+                "tanka_form": TankaForm()
             },
         )

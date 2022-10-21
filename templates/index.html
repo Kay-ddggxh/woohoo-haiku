@@ -8,7 +8,7 @@
     <div class="row d-flex justify-content-evenly">
         {% for haiku in haiku_list %}
         <div class="col-md-5 p-3 m-3 haiku-card">
-            <a href="{% url 'haiku_detail' haiku.slug %}">
+            <a href="{% url 'haiku_detail' haiku.slug %}" class="haiku-card_link">
                 <h3>
                     {{ haiku.title }}
                 </h3>
