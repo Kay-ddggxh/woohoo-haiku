@@ -2,10 +2,23 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <h2>Read <br>"{{ haiku.title }}"</h2>
 <p class="text-center">by {{ haiku.author }}</p>
 <article class="haiku-content">
     {{ haiku.content | safe }}
 </article>
+
+{% if user.is_authenticated %}
+
+<p class="text-center">Add a tanka extension:</p>
+<form action="post" class="tanka-form">
+    {{ tanka_form | safe }}
+    {% csrf_token %}
+    <button type="submit" class="tanka-btn">Submit</button>
+</form>
+
+{% endif %}
 
 {% endblock %}
