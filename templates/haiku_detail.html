@@ -1,24 +1,42 @@
-{% extends "base.html" %}
-
-{% block content %}
-
+{% extends "base.html" %} 
+{% block content %} 
 {% load crispy_forms_tags %}
 
-<h2>Read <br>"{{ haiku.title }}"</h2>
+<h2>Read <br />"{{ haiku.title }}"</h2>
+<!-- Haiku content -->
 <p class="text-center">by {{ haiku.author }}</p>
-<article class="haiku-content">
-    {{ haiku.content | safe }}
-</article>
+<article class="haiku-content">{{ haiku.content | safe }}</article>
 
-{% if user.is_authenticated %}
+<!-- Already added tanka extensions -->
+<p class="text-center h3 p-1">See how other people continued this poem</p>
+{% for tanka in tankas %} 
+    {% if tanka.approved %}
+        <div class="tanka">
+            {{ tanka.body | safe }}
+        </div>
+    {% endif %} 
+{% endfor %}
 
-<p class="text-center">Add a tanka extension:</p>
-<form action="post" class="tanka-form">
-    {{ tanka_form | safe }}
-    {% csrf_token %}
-    <button type="submit" class="tanka-btn">Submit</button>
-</form>
 
-{% endif %}
+{% if tanka_added %}
+<!-- Alert to wait for tanka approval -->
+<div class="alert alert-success alert-el" role="alert">
+    Your tanka is waiting approval
+</div>
+{% else %}
+
+    {% if user.is_authenticated %}
+
+    <!-- Tanka submission form -->
+    <p class="text-center">Add a tanka extension:</p>
+    <form method="post" class="tanka-form">
+        {{ tanka_form | safe }} 
+        {% csrf_token %}
+        <button type="submit" class="tanka-btn">Submit</button>
+    </form>
+
+    {% endif %} 
+
+{% endif %} 
 
 {% endblock %}

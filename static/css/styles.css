@@ -207,3 +207,8 @@ footer {
     width: fit-content;
     margin-top: 1em;
 }
+
+.alert-el {
+    width: fit-content;
+    margin: 0 auto;
+}
