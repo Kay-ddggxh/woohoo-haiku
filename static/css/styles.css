@@ -181,14 +181,15 @@ footer {
 }
 
 
-/* Tanka form styling */
+/* Tanka form  and content styling */
 
 .tanka-form {
     display: flex;
     flex-direction: column;
 }
 
-.tanka-form>textarea {
+.tanka-form>textarea,
+.tanka {
     border: 1px solid rgb(223, 223, 223);
     border-radius: 5px;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
@@ -208,7 +209,17 @@ footer {
     margin-top: 1em;
 }
 
-.alert-el {
+.alert-el,
+.tanka {
     width: fit-content;
     margin: 0 auto;
+}
+
+.tanka {
+    height: auto;
+}
+
+.tanka-author {
+    font-size: .7em;
+    font-weight: 700;
 }

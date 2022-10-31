@@ -1,5 +1,5 @@
-{% extends "base.html" %} 
-{% block content %} 
+{% extends "base.html" %}
+{% block content %}
 {% load crispy_forms_tags %}
 
 <h2>Read <br />"{{ haiku.title }}"</h2>
@@ -8,35 +8,38 @@
 <article class="haiku-content">{{ haiku.content | safe }}</article>
 
 <!-- Already added tanka extensions -->
-<p class="text-center h3 p-1">See how other people continued this poem</p>
-{% for tanka in tankas %} 
-    {% if tanka.approved %}
-        <div class="tanka">
-            {{ tanka.body | safe }}
+<p class="text-center h3 my-4">See how other people continued this poem</p>
+    {% for tanka in tankas %}
+        {% if tanka.approved %}
+            <div class="tanka">
+                {{ tanka.body | safe }}
+                <div class="tanka-author">
+                    by {{ tanka.name }}
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+
+    {% if tanka_added %}
+        <!-- Alert to wait for tanka approval -->
+        <div class="alert alert-success alert-el" role="alert">
+            Your tanka is waiting approval
         </div>
-    {% endif %} 
-{% endfor %}
+    {% else %}
 
+        {% if user.is_authenticated %}
 
-{% if tanka_added %}
-<!-- Alert to wait for tanka approval -->
-<div class="alert alert-success alert-el" role="alert">
-    Your tanka is waiting approval
-</div>
-{% else %}
+            <!-- Tanka submission form -->
+            <p class="text-center mt-5">Add a tanka extension:</p>
+            <form method="post" class="tanka-form">
+                {{ tanka_form | safe }}
+                {% csrf_token %}
+                <button type="submit" class="tanka-btn">Submit</button>
+            </form>
 
-    {% if user.is_authenticated %}
+        {% endif %}
 
-    <!-- Tanka submission form -->
-    <p class="text-center">Add a tanka extension:</p>
-    <form method="post" class="tanka-form">
-        {{ tanka_form | safe }} 
-        {% csrf_token %}
-        <button type="submit" class="tanka-btn">Submit</button>
-    </form>
-
-    {% endif %} 
-
-{% endif %} 
+    {% endif %}
 
 {% endblock %}
