@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Haiku, Tanka
 from .forms import TankaForm
 
@@ -62,3 +63,16 @@ class HaikuDetail(View):
                 "tanka_form": TankaForm()
             },
         )
+
+
+class HaikuLike(View):
+
+    def post(self, request, slug):
+        haiku = get_object_or_404(Haiku, slug=slug)
+
+        if haiku.likes.filter(id=request.user.id).exists():
+            haiku.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('haiku_detail', args=[slug]))

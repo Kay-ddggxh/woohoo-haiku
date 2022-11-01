@@ -12,7 +12,7 @@ class Haiku(models.Model):
     content = models.TextField()
     create_date = models.DateField(auto_now_add=True)
     likes = models.ManyToManyField(
-        User, related_name='haiku_likes', blank=True)
+        User, related_name='haiku_like', blank=True)
     # tag = models.TextChoices() => many to many?
     # bg_image = CloudinaryField('image', default='placeholder')
     # possibly user uploaded image
@@ -22,6 +22,10 @@ class Haiku(models.Model):
 
     def __str__(self):
         return self.title
+
+    def number_of_likes(self):
+        # helper method to return total num of likes on post
+        return self.likes.count()
 
 
 class Tanka(models.Model):
