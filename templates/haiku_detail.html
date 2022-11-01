@@ -2,7 +2,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<h2>Read <br />"{{ haiku.title }}" <i class="fa-solid fa-flower"></i></h2>
+<h2>Read <br />"{{ haiku.title }}" <i class="fa-brands fa-instagram social-icon"></i></h2>
 <!-- Haiku content -->
 <p class="text-center">by {{ haiku.author }}</p>
 <article class="haiku-content">{{ haiku.content | safe }}</article>
@@ -14,15 +14,15 @@
         {% csrf_token %}
         {% if liked %}
             <button type="submit" name="haiku_id" value="{{ post.slug }}" class="like-btn">
-                <i class="fa-solid fa-flower"></i>
+                <i class="fa-brands fa-instagram social-icon"></i>
             </button>
         {% else %}
             <button type="submit" name="haiku_id" value="{{ post.slug }}" class="like-btn">
-                <i class="fa-thin fa-flower"></i>
+                <i class="fa-brands fa-instagram social-icon"></i>
             </button>                
         {% endif %}
     </form>
-    <span><i class="fa-thin fa-flower"></i></span>
+    <span><i class="fa-brands fa-instagram social-icon"></i></span>
     {% else %}
     <span class="likes-number">{{ haiku.number_of_likes }}</span>
     {% endif %}
