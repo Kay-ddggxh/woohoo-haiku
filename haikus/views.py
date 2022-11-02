@@ -73,6 +73,6 @@ class HaikuLike(View):
         if haiku.likes.filter(id=request.user.id).exists():
             haiku.likes.remove(request.user)
         else:
-            post.likes.add(request.user)
+            haiku.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('haiku_detail', args=[slug]))

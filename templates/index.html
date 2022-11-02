@@ -17,6 +17,14 @@
                     <div class="tag">TagName</div>
                 </div>
             </a>
+            <div class="likes-tankas-numbers mt-2">
+                <span class="likes">{{ haiku.number_of_likes }}
+                    <iconify-icon inline icon="emojione:cherry-blossom"></iconify-icon>
+                </span>
+                <span class="tankas">Tanka count
+                    <iconify-icon inline icon="uil:comment-image" style="color: #ff506e;"></iconify-icon>
+                </span>
+            </div>
         </div>
         {% endfor %}
     </div>

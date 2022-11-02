@@ -2,31 +2,35 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<h2>Read <br />"{{ haiku.title }}" <i class="fa-brands fa-instagram social-icon"></i></h2>
+<h2>Read <br />"{{ haiku.title }}"</h2>
 <!-- Haiku content -->
 <p class="text-center">by {{ haiku.author }}</p>
-<article class="haiku-content">{{ haiku.content | safe }}</article>
+<article class="haiku-content">{{ haiku.content | safe }}
 
-<!-- Like functionality -->
-<div class="like-haiku">
-    {% if user.is_authenticated %}
-    <form class="like-form" action="{% url 'haiku_like' haiku.slug %}" method="post">
-        {% csrf_token %}
-        {% if liked %}
-            <button type="submit" name="haiku_id" value="{{ post.slug }}" class="like-btn">
-                <i class="fa-brands fa-instagram social-icon"></i>
-            </button>
+    <!-- Like functionality -->
+    <div class="like-haiku">
+        {% if user.is_authenticated %}
+        <form class="like-form" action="{% url 'haiku_like' haiku.slug %}" method="post">
+            {% csrf_token %}
+            {% if liked %}
+                <button type="submit" name="haiku_id" value="{{ post.slug }}" class="like-btn">
+                    <iconify-icon inline icon="emojione:cherry-blossom"></iconify-icon>
+                </button>
+            {% else %}
+                <button type="submit" name="haiku_id" value="{{ post.slug }}" class="like-btn">
+                    <iconify-icon inline icon="emojione-monotone:cherry-blossom"></iconify-icon>
+                </button>                
+            {% endif %}
+        </form>
         {% else %}
-            <button type="submit" name="haiku_id" value="{{ post.slug }}" class="like-btn">
-                <i class="fa-brands fa-instagram social-icon"></i>
-            </button>                
+        <span>
+            <iconify-icon inline icon="emojione-monotone:cherry-blossom"></iconify-icon>
+        </span>
         {% endif %}
-    </form>
-    <span><i class="fa-brands fa-instagram social-icon"></i></span>
-    {% else %}
-    <span class="likes-number">{{ haiku.number_of_likes }}</span>
-    {% endif %}
-</div>
+        <span class="likes-number">{{ haiku.number_of_likes }}</span>
+    </div>
+
+</article>
 
 <!-- Already added tanka extensions -->
 <p class="text-center h3 my-4">See how other people continued this poem</p>
@@ -44,8 +48,8 @@
 
     {% if tanka_added %}
         <!-- Alert to wait for tanka approval -->
-        <div class="alert alert-success alert-el" role="alert">
-            Your tanka is waiting approval
+        <div class="alert alert-success alert-el mt-4" role="alert">
+            Your tanka is awaiting approval
         </div>
     {% else %}
 

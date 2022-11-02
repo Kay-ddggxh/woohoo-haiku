@@ -217,9 +217,28 @@ footer {
 
 .tanka {
     height: auto;
+    margin-top: 1.5em;
 }
 
 .tanka-author {
     font-size: .7em;
     font-weight: 700;
+}
+
+
+/* Like functionality styling */
+
+.like-form {
+    display: inline;
+}
+
+.like-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+
+.like-btn:hover {
+    transform: scale(1.1);
+    transition: ease-in-out;
 }
