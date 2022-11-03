@@ -242,3 +242,7 @@ footer {
     transform: scale(1.1);
     transition: ease-in-out;
 }
+
+.likes-number {
+    margin-right: 2em;
+}

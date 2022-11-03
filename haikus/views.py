@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.db.models import Q, Count
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Haiku, Tanka
@@ -16,7 +17,8 @@ class HaikuDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Haiku.objects
         haiku = get_object_or_404(queryset, slug=slug)
-        tankas = haiku.tankas.order_by('create_date')  # filter by approval
+        tankas = haiku.tankas.order_by('create_date')
+        tanka_count = Tanka.objects.filter(approved=True).count()
         liked = False
         if haiku.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -29,7 +31,8 @@ class HaikuDetail(View):
                 "tankas": tankas,
                 "tanka_added": False,
                 "liked": liked,
-                "tanka_form": TankaForm()
+                "tanka_form": TankaForm(),
+                "tanka_count": tanka_count
             },
         )
 
@@ -59,8 +62,8 @@ class HaikuDetail(View):
                 "haiku": haiku,
                 "tankas": tankas,
                 "tanka_added": True,
+                "tanka_form": tanka_form,
                 "liked": liked,
-                "tanka_form": TankaForm()
             },
         )
 

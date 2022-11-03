@@ -73,6 +73,16 @@
             </div>
         </nav>
 
+        <!-- Alert messages -->     
+        <div class="alert-el mt-3">
+            {% for message in messages %}
+                <div class="alert {{ message.tags}} alert-dismissible fade show" id="alert-msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        </div>
+
         <!-- Header section -->
         <header>
             <h1 class="text-center">Woohoo Haiku</h1>
@@ -94,6 +104,15 @@
             <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link"
                 aria-label="Instagram"><i class="fa-brands fa-instagram social-icon"></i></a>
         </footer>
+
+        <!-- Timeout function for alert messages -->
+        <script>
+            setTimeout(function() {
+                let msg = document.getElementById("alert-msg");
+                let alert = new bootstrap.Alert(msg);
+                alert.close();
+            }, 3000)
+        </script>
     </body>
 
 </html>
