@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<h2>Write your own Haiku</h2>       
+<p class="text-center mt-5">
+    Writing a haiku is simple and with some practice a lot of fun.
+    Just follow this basic structure as the minimal rule set, everything else 
+    is up to you! 
+</p>
+<p>Use three lines for your haiku.</p>
+<p>The first and third line have 5 syllables each</p>
+<p>Your haiku shouldn't rhyme</p>
+<p>Traditionally a cutting word, called a <em>kireji</em> is included
+    as well as a seasonal reference. In this modern however not all topics warrent
+    a seasonal reference and in order to make easier for beginners a <em>kireji</em>
+    is not mandetory.
+</p>
+<p>Just tag your haiku with one of the subject provided and don't worry about anything
+    else. Have fun!
+</p>
+    
+
+<!-- Haiku submission form -->
+<form method="post" class="haiku-form">
+    
+    {% csrf_token %}
+    <button type="submit" class="tanka-btn">Submit</button>
+</form>
+
+{% endblock %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.db.models import Q, Count
 from django.views import generic, View
+from django.views.generic.edit import CreateView
 from django.http import HttpResponseRedirect
 from .models import Haiku, Tanka
 from .forms import TankaForm
