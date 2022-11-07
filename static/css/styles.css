@@ -181,7 +181,7 @@ footer {
 }
 
 
-/* Tanka form  and content styling */
+/* Haiku form and Tanka form/content styling */
 
 .tanka-form {
     display: flex;
@@ -189,7 +189,7 @@ footer {
 }
 
 .tanka-form>textarea,
-.haiku-form>textarea,
+.haiku-form textarea,
 .tanka {
     border: 1px solid rgb(223, 223, 223);
     border-radius: 5px;
@@ -198,10 +198,16 @@ footer {
     width: 19em;
     padding: 1em;
     font-family: 'Quicksand', sans-serif;
-
 }
 
-.tanka-form>label {
+.haiku-form textarea {
+    height: auto;
+    width: 90%;
+    line-height: 1.8;
+}
+
+.tanka-form>label,
+.haiku-form label {
     display: none;
 }
 
