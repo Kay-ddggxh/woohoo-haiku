@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic.edit import CreateView
 from django.http import HttpResponseRedirect
 from .models import Haiku, Tanka
-from .forms import TankaForm
+from .forms import HaikuForm, TankaForm
 
 
 class HaikuList(generic.ListView):
@@ -79,3 +79,14 @@ class HaikuLike(View):
             haiku.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('haiku_detail', args=[slug]))
+
+
+class CreateHaiku(CreateView):
+    """
+    Allows authenticated user to add
+    and save haikus
+    """
+    model = Haiku
+    form_class = HaikuForm
+    template_name = 'create_haiku.html'
+    success_url = 'home'
