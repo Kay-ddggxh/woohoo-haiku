@@ -190,6 +190,7 @@ footer {
 
 .tanka-form>textarea,
 .haiku-form textarea,
+.haiku-form input,
 .tanka {
     border: 1px solid rgb(223, 223, 223);
     border-radius: 5px;
@@ -200,7 +201,8 @@ footer {
     font-family: 'Quicksand', sans-serif;
 }
 
-.haiku-form textarea {
+.haiku-form textarea,
+.haiku-form input {
     height: auto;
     width: 90%;
     line-height: 1.8;

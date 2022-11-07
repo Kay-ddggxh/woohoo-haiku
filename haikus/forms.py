@@ -9,7 +9,14 @@ class HaikuForm(forms.ModelForm):
     """
     class Meta:
         model = Haiku
-        fields = ('content',)
+        fields = ('title', 'content',)
+
+    def __init__(self, *args, **kwargs):
+        super(HaikuForm, self).__init__(*args, **kwargs)
+        self.fields['title'].widget = forms.TextInput(
+            attrs={'placeholder': 'Enter a title'})
+        self.fields['content'].widget = forms.Textarea(
+            attrs={'placeholder': 'Write haiku here'})
 
 
 class TankaForm(forms.ModelForm):
