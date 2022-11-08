@@ -4,7 +4,9 @@ from cloudinary.models import CloudinaryField
 
 
 class Haiku(models.Model):
-
+    """
+    Defines Haiku object
+    """
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     author = models.ForeignKey(
@@ -13,7 +15,7 @@ class Haiku(models.Model):
     create_date = models.DateField(auto_now_add=True)
     likes = models.ManyToManyField(
         User, related_name='haiku_like', blank=True)
-    # tag = models.TextChoices() => many to many?
+    tag = models.CharField(max_length=80, default="Other")
     # bg_image = CloudinaryField('image', default='placeholder')
     # possibly user uploaded image
 
@@ -29,7 +31,9 @@ class Haiku(models.Model):
 
 
 class Tanka(models.Model):
-
+    """
+    Defines Tanka object
+    """
     post = models.ForeignKey(
         Haiku, on_delete=models.CASCADE, related_name='tankas')
     name = models.CharField(max_length=60)
@@ -42,3 +46,13 @@ class Tanka(models.Model):
 
     def __str__(self):
         return f"{self.name} made this into a tanka: {self.body}"
+
+
+class Tag(models.Model):
+    """
+    Defines tag (category) object
+    """
+    tagname = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.tagname
