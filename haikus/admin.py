@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Haiku, Tanka
+from .models import Haiku, Tanka, Tag
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -21,4 +21,7 @@ class HaikuAdmin(SummernoteModelAdmin):
     list_filter = ('approved', 'create_date')   # tag later
     summernote_fields = ('body')
 
-    # possibly add approve method here
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    pass
