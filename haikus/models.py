@@ -15,7 +15,7 @@ class Haiku(models.Model):
     create_date = models.DateField(auto_now_add=True)
     likes = models.ManyToManyField(
         User, related_name='haiku_like', blank=True)
-    tag = models.CharField(max_length=80, default="Other")
+    tag = models.CharField(max_length=80, default="Tag your haiku")
     # bg_image = CloudinaryField('image', default='placeholder')
     # possibly user uploaded image
 

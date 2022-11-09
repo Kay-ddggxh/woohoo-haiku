@@ -14,4 +14,6 @@ The view that enables an authenticated user to add and save their own haiku was 
 
 **Form Customisation**:
 
-To add placeholder text to the HaikuForm input fields I used [Django Widgets](https://docs.djangoproject.com/en/dev/ref/forms/widgets/) inside the constructor method. It was achieved taking input from [this tutorial](https://www.youtube.com/watch?v=C_tb3AOj2qg&ab_channel=VeryAcademy) and a [Stackoverflow article](https://stackoverflow.com/questions/4101258/how-do-i-add-a-placeholder-on-a-charfield-in-django)
+Form customisation was achieved using [Django Widgets](https://docs.djangoproject.com/en/dev/ref/forms/widgets/). 
+
+The syntax for adding a form select field was inspired by a [Codemy tutorial](https://www.youtube.com/watch?v=_ph8GF84fX4&ab_channel=Codemy.com) 

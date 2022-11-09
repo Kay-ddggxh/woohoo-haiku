@@ -1,5 +1,9 @@
-from .models import Haiku, Tanka
+from .models import Haiku, Tanka, Tag
 from django import forms
+
+choises = Tag.objects.all().values_list('tagname', 'tagname')
+
+CHOICE_LIST = []
 
 
 class HaikuForm(forms.ModelForm):
@@ -9,14 +13,14 @@ class HaikuForm(forms.ModelForm):
     """
     class Meta:
         model = Haiku
-        fields = ('title', 'content',)
+        fields = ('title', 'tag', 'content',)
 
-    def __init__(self, *args, **kwargs):
-        super(HaikuForm, self).__init__(*args, **kwargs)
-        self.fields['title'].widget = forms.TextInput(
-            attrs={'placeholder': 'Enter a title'})
-        self.fields['content'].widget = forms.Textarea(
-            attrs={'placeholder': 'Write haiku here'})
+        widgets = {
+            'title': forms.TextInput(attrs={'placeholder': 'Enter a title'}),
+            'tag': forms.Select(choices=CHOICE_LIST),
+            'content': forms.Textarea(
+                attrs={'placeholder': 'Write Haiku here'})
+        }
 
 
 class TankaForm(forms.ModelForm):
