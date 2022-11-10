@@ -5,6 +5,9 @@ choises = Tag.objects.all().values_list('tagname', 'tagname')
 
 CHOICE_LIST = []
 
+for choice in choises:
+    CHOICE_LIST.append(choice)
+
 
 class HaikuForm(forms.ModelForm):
     """

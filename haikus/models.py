@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
 from cloudinary.models import CloudinaryField
 
 
@@ -28,6 +29,12 @@ class Haiku(models.Model):
     def number_of_likes(self):
         # helper method to return total num of likes on post
         return self.likes.count()
+
+    def save(self, *args, **kwargs):
+        # helper method to generate slug for haikus submitted
+        # by non-admin users
+        self.slug = slugify(self.title)
+        super(Haiku, self).save(*args, **kwargs)
 
 
 class Tanka(models.Model):

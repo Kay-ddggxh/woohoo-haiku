@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic.edit import CreateView
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from .models import Haiku, Tanka
 from .forms import HaikuForm, TankaForm
 
@@ -89,4 +90,8 @@ class CreateHaiku(CreateView):
     model = Haiku
     form_class = HaikuForm
     template_name = 'create_haiku.html'
-    success_url = 'home'
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super(CreateView, self).form_valid(form)
