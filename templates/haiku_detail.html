@@ -6,7 +6,7 @@
 <!-- Haiku content -->
 <p class="tag-label text-center fw-bold">{{ haiku.tag }}</p>
 <p class="text-center">by {{ haiku.author }}</p>
-<article class="haiku-content">{{ haiku.content | safe }}
+<article class="haiku-content">{{ haiku.content | safe | linebreaks }}
 
     <!-- Like functionality -->
     <div class="like-haiku">
@@ -36,6 +36,9 @@
     </div>
 
 </article>
+
+<!-- Edit haiku functionality -->
+<a href="{% url 'update' haiku.pk %}" class="edit-btn" role="button">Edit</a>
 
 <!-- Already added tanka extensions -->
 <p class="text-center h3 my-4">See how other people continued this poem</p>

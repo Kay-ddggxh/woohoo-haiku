@@ -4,7 +4,7 @@
 
 ## References/Documentation/Tutorials
 
-### Django Documentation
+### Django Practices and Syntax
 
 The official [Django Documentation](https://docs.djangoproject.com/en/4.1/) was used throughout creating this project.
 
@@ -39,3 +39,7 @@ The syntax for adding a form select field was inspired by a [Codemy tutorial](ht
 - **Select option in Haiku form not disabled**:
 
     The select option in the haiku form with value "Tag your haiku" is not disabled and could potentially be selected as a tag option.
+
+- **Haiku update form showing html for admin**:
+
+    When editing a haiku as an admin user, the haiku content renders html tags and attributes in the textarea of the edit form

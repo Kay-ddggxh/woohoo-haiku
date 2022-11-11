@@ -220,7 +220,8 @@ footer {
     display: none;
 }
 
-.tanka-btn {
+.tanka-btn,
+.edit-btn {
     width: fit-content;
     display: block;
     margin: 0 auto;
@@ -262,4 +263,19 @@ footer {
 
 .likes-number {
     margin-right: 2em;
+}
+
+/* Edit/Delete button styling */
+
+.edit-btn {
+    text-decoration: none;
+    color: #000;
+    padding: .3em .6em;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(133, 170, 255, .5);
+}
+
+.edit-btn:visited {
+    color: #000;
 }
