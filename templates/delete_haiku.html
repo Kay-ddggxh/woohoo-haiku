@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<h2>Delete your Haiku</h2>   
+
+<p class="text-center">You are about to delete {{ haiku.title }}</p>
+<!-- Haiku delete form -->
+{% if user.id == haiku.author.id %}
+<!-- this if statement prevents unauthorized user to edit 
+    haiku via URL -->
+    <form method="POST" class="haiku-form">      
+        {% csrf_token %}
+        <button type="submit" class="delete-btn my-0 mx-auto d-block">Delete</button>
+    </form>
+{% endif %}
+
+{% endblock %}

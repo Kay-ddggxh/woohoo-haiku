@@ -9,7 +9,6 @@
 <!-- this if statement prevents unauthorized user to edit 
     haiku via URL -->
     <form method="POST" class="haiku-form">
-        
         {% csrf_token %}
         {{ form.as_p | safe }}
         <button type="submit" class="edit-btn">Edit</button>

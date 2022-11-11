@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from .models import Haiku, Tanka
@@ -110,3 +110,13 @@ class UpdateHaiku(UpdateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super(UpdateView, self).form_valid(form)
+
+
+class DeleteHaiku(DeleteView):
+    """
+    Allows authenticated users to delete
+    submitted haikus
+    """
+    model = Haiku
+    template_name = 'delete_haiku.html'
+    success_url = reverse_lazy('home')

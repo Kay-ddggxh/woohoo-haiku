@@ -221,7 +221,7 @@ footer {
 }
 
 .tanka-btn,
-.edit-btn {
+.update-btn-group {
     width: fit-content;
     display: block;
     margin: 0 auto;
@@ -267,15 +267,22 @@ footer {
 
 /* Edit/Delete button styling */
 
-.edit-btn {
+.edit-btn,
+.delete-btn {
     text-decoration: none;
     color: #000;
     padding: .3em .6em;
+    margin: 0 .3em;
     border-radius: 5px;
     border: none;
     background-color: rgba(133, 170, 255, .5);
 }
 
-.edit-btn:visited {
+.delete-btn {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.edit-btn:visited,
+.delete-btn:visited {
     color: #000;
 }
