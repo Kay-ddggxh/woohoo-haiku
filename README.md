@@ -6,7 +6,13 @@
 
 ### Django Practices and Syntax
 
+**General**:
+
 The official [Django Documentation](https://docs.djangoproject.com/en/4.1/) was used throughout creating this project.
+
+The skeleton of this project is based on the [Code Institute](https://codeinstitute.net/ie/) tutorials "Hello Django" and "I Think Therefore I Blog".
+
+For further guidance on syntax and implementation of features I also referred to [Codemy Django tutorials](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com) and [Very Academy tutorials](https://www.youtube.com/c/veryacademy/playlists)
 
 **CreateHaiku View**:
 

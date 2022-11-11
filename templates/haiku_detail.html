@@ -37,8 +37,10 @@
 
 </article>
 
-<!-- Edit haiku functionality -->
-<a href="{% url 'update' haiku.pk %}" class="edit-btn" role="button">Edit</a>
+<!-- Edit/Delete haiku functionality -->
+{% if user.id == haiku.author.id %}
+    <a href="{% url 'update' haiku.pk %}" class="edit-btn" role="button">Edit</a>
+{% endif %}
 
 <!-- Already added tanka extensions -->
 <p class="text-center h3 my-4">See how other people continued this poem</p>

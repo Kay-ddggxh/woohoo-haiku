@@ -4,12 +4,16 @@
 
 <h2>Edit your Haiku</h2>   
 
-<!-- Haiku submission form -->
-<form method="POST" class="haiku-form">
-    
-    {% csrf_token %}
-    {{ form.as_p | safe }}
-    <button type="submit" class="edit-btn">Edit</button>
-</form>
+<!-- Haiku edit form -->
+{% if user.id == haiku.author.id %}
+<!-- this if statement prevents unauthorized user to edit 
+    haiku via URL -->
+    <form method="POST" class="haiku-form">
+        
+        {% csrf_token %}
+        {{ form.as_p | safe }}
+        <button type="submit" class="edit-btn">Edit</button>
+    </form>
+{% endif %}
 
 {% endblock %}
