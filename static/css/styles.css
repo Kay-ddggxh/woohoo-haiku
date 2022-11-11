@@ -268,21 +268,27 @@ footer {
 /* Edit/Delete button styling */
 
 .edit-btn,
-.delete-btn {
+.delete-btn,
+.cancel-btn {
     text-decoration: none;
     color: #000;
     padding: .3em .6em;
     margin: 0 .3em;
     border-radius: 5px;
     border: none;
-    background-color: rgba(133, 170, 255, .5);
+    background-color: rgba(133, 170, 255, .4);
 }
 
 .delete-btn {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.cancel-btn {
+    background-color: rgba(14, 143, 0, .4);
 }
 
 .edit-btn:visited,
-.delete-btn:visited {
+.delete-btn:visited,
+.cancel-btn {
     color: #000;
 }

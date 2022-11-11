@@ -4,14 +4,17 @@
 
 <h2>Delete your Haiku</h2>   
 
-<p class="text-center">You are about to delete {{ haiku.title }}</p>
+<p class="text-center">Are you sure you want to delete "{{ haiku.title }}"?</p>
 <!-- Haiku delete form -->
 {% if user.id == haiku.author.id %}
-<!-- this if statement prevents unauthorized user to edit 
+<!-- this if statement prevents unauthorized user to delete
     haiku via URL -->
     <form method="POST" class="haiku-form">      
         {% csrf_token %}
-        <button type="submit" class="delete-btn my-0 mx-auto d-block">Delete</button>
+        <div class="update-btn-group">
+            <button type="submit" class="delete-btn">Delete</button>
+            <a href="{% url 'home' %}" role="button" class="cancel-btn">Cancel</a>
+        </div>
     </form>
 {% endif %}
 
