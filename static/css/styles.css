@@ -199,6 +199,7 @@ footer {
     height: 7em;
     width: 19em;
     padding: 1em;
+    margin-bottom: 1em;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -210,6 +211,10 @@ footer {
     line-height: 1.8;
 }
 
+.note-editor {
+    width: 100% !important;
+}
+
 .tanka-form>label,
 .haiku-form label {
     display: none;
@@ -217,7 +222,8 @@ footer {
 
 .tanka-btn {
     width: fit-content;
-    margin-top: 1em;
+    display: block;
+    margin: 0 auto;
 }
 
 .alert-el,

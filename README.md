@@ -21,6 +21,17 @@ The syntax for adding a form select field was inspired by a [Codemy tutorial](ht
 
 ## Bugs
 
+### Fixed bugs
+
+- **Slug for user haiku**:
+
+    For a haiku submitted by a non-admin user the slug won't auto-generate.
+
+    **Fix**: Include helper method ```save``` in ```Haiku``` model ([Reference](https://stackoverflow.com/questions/68897050/slug-not-auto-generate-after-add-page-in-django))
+
+
+### Unfixed bugs
+
 - **Tanka count on homepage**:
 
     The tanka counter of each haiku entry on the homepage displays the number off all submitted tankas when it should only count approved submits

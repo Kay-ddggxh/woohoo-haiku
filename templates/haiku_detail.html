@@ -4,6 +4,7 @@
 
 <h2>Read <br />"{{ haiku.title }}"</h2>
 <!-- Haiku content -->
+<p class="tag-label text-center fw-bold">{{ haiku.tag }}</p>
 <p class="text-center">by {{ haiku.author }}</p>
 <article class="haiku-content">{{ haiku.content | safe }}
 
@@ -29,7 +30,7 @@
         {% endif %}
         <span class="likes-number">{{ haiku.number_of_likes }}</span>
         <span class="tankas-num">
-            <iconify-icon inline icon="uil:comment-image" style="color: #ff506e;" width="24"></iconify-icon>
+            <iconify-icon inline icon="uil:comment-image" style="color: #ff506e;" width="20"></iconify-icon>
                 {{ tanka_count }}
         </span>
     </div>
