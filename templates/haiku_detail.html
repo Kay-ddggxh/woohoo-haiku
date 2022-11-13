@@ -40,8 +40,8 @@
 <!-- Edit/Delete haiku functionality -->
 {% if user.id == haiku.author.id %}
     <div class="update-btn-group">
-        <a href="{% url 'update' haiku.pk %}" class="edit-btn" role="button">Edit</a>
-        <a href="{% url 'delete' haiku.pk %}" class="delete-btn" role="button">Delete</a>
+        <a href="{% url 'update' haiku.slug %}" class="edit-btn" role="button">Edit</a>
+        <a href="{% url 'delete' haiku.slug %}" class="delete-btn" role="button">Delete</a>
     </div>
 {% endif %}
 
