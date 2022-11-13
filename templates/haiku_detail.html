@@ -69,7 +69,16 @@
         {% if user.is_authenticated %}
 
             <!-- Tanka submission form -->
-            <p class="mt-5">Add a tanka extension:</p>
+            <p class="h3 mt-5 mb-4">Add a tanka extension</p>
+            <p class="intro-text mb-4">
+                Turning a haiku into a tanka is easy.<br>
+                Simply add two more lines of 7 syllables each.<br>
+                However, there is a challenge. Your extension has to match the theme and general mood
+                of the existing haiku. This can prove difficult as haikus are often somewhat cryptic and
+                and the subject might only be clear to the author.<br>
+                But therein lies the fun.<br>
+                So give it a try!
+            </p>
             <form method="post" class="tanka-form">
                 {{ tanka_form | safe }}
                 {% csrf_token %}

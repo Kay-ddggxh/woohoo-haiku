@@ -26,7 +26,7 @@
     font-style: normal;
 }
 
-/* General stylinng */
+/* General styling */
 
 body {
     position: relative;
@@ -72,6 +72,7 @@ h3 {
 
 p {
     font-family: 'Quicksand', sans-serif;
+    text-align: center;
 }
 
 main {
@@ -117,13 +118,10 @@ nav {
     border: none;
 }
 
-/* General paragraph styling */
-
-p {
-    text-align: center;
-}
+/* General text styling */
 
 .intro-text {
+    margin: 0 auto;
     max-width: 880px;
 }
 
