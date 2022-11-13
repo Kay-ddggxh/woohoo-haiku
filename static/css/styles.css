@@ -29,20 +29,14 @@
 /* General stylinng */
 
 body {
-    /* background-image: url(https://res.cloudinary.com/kay-ddggxh/image/upload/v1665585796/kisspng-plum-blossom-red-plum-5a985745914049.001159381519933253595_o082wi.png);
-    background-size: 25vw;
-    background-position-x: left;
-    background-repeat: no-repeat; */
     position: relative;
 }
 
 .background-img::before {
     content: "";
     background-image: url(https://res.cloudinary.com/kay-ddggxh/image/upload/v1668364190/kisspng-plum-blossom-red-plum-flipped-turned.png);
-
     background-size: cover;
     background-position: center;
-
     position: absolute;
     top: 0px;
     right: 0px;
