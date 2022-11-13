@@ -4,8 +4,8 @@
 
 <h2>Read <br />"{{ haiku.title }}"</h2>
 <!-- Haiku content -->
-<p class="tag-label text-center fw-bold">{{ haiku.tag }}</p>
-<p class="text-center">by {{ haiku.author }}</p>
+<p class="tag-label fw-bold">{{ haiku.tag }}</p>
+<p>by {{ haiku.author }}</p>
 <article class="haiku-content">{{ haiku.content | safe | linebreaks }}
 
     <!-- Like functionality -->
@@ -46,7 +46,7 @@
 {% endif %}
 
 <!-- Already added tanka extensions -->
-<p class="text-center h3 my-4">See how other people continued this poem</p>
+<p class="h3 my-4">See how other people continued this poem</p>
     {% for tanka in tankas %}
         {% if tanka.approved %}
             <div class="tanka">
@@ -69,7 +69,7 @@
         {% if user.is_authenticated %}
 
             <!-- Tanka submission form -->
-            <p class="text-center mt-5">Add a tanka extension:</p>
+            <p class="mt-5">Add a tanka extension:</p>
             <form method="post" class="tanka-form">
                 {{ tanka_form | safe }}
                 {% csrf_token %}
