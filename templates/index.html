@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container-fluid my-0 mx-auto w-75 text-center">
+    <p class="mb-5">
+    Do you like poetry and playing with words? Do you enjoy crafting 
+    images via verbal means? Then this little site is for you. <br>
+    Here you can write your own haikus, read other's and even join in their creative process by 
+    extending their haikus into a tanka in a call-and-response fashion. Just sign up and you're good to go.<br>
+    Not familiar with haikus and tanka formats? No worries. Once you're logged in you can head over to the 
+    <a href="{% url 'create_haiku' %}">Create page</a> where you'll find simple instructions.<br>
+    Happy writing!
+    </p>
+</div>
 
 <h2>Browse Haikus</h2>
 
