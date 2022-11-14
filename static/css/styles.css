@@ -1,5 +1,7 @@
 :root {
-    --primary-color: #ff2a00;
+    --primary-color: #e91c32;
+    --p-color-opaque: rgb(233, 28, 50, .6);
+    font-size: 18px;
 }
 
 *,
@@ -82,13 +84,14 @@ main {
 /* Navigation styling */
 
 nav {
-    background-color: var(--primary-color);
+    background-color: var(--p-color-opaque);
+    box-shadow: 0px -3px 14px 15px var(--p-color-opaque);
 }
 
 .logo {
     width: 50px;
     border-radius: 50%;
-    box-shadow: 3px 3px rgb(80, 80, 80);
+    box-shadow: 2px 2px 10px rgb(80 80 80);
 }
 
 .logo-link:active,
@@ -107,7 +110,7 @@ nav {
 
 .nav-link {
     font-family: 'Dekiru';
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #fff;
 }
 
@@ -166,18 +169,24 @@ nav {
 /* Footer styling */
 
 footer {
-    background-color: var(--primary-color);
-    margin-top: 2rem;
+    background-color: var(--p-color-opaque);
+    box-shadow: 0px -3px 14px 15px var(--p-color-opaque);
+    margin-top: 3rem;
 }
 
 .social-link {
-    text-shadow: 3px 3px rgb(80, 80, 80);
+    text-shadow: 2px 2px 10px rgb(80 80 80);
 }
 
 .social-icon {
     color: #fff;
     font-size: 1.7rem;
     margin: 0 1.5em;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 200ms;
 }
 
 
