@@ -33,7 +33,18 @@ The syntax for adding a form select field was inspired by a [Codemy tutorial](ht
 
     For a haiku submitted by a non-admin user the slug won't auto-generate.
 
-    **Fix**: Include helper method ```save``` in ```Haiku``` model ([Reference](https://stackoverflow.com/questions/68897050/slug-not-auto-generate-after-add-page-in-django))
+    **Fix**: 
+    
+    Include helper method ```save``` in ```Haiku``` model ([Reference](https://stackoverflow.com/questions/68897050/slug-not-auto-generate-after-add-page-in-django)).
+
+
+- **Nav link of current page not highlighted**:
+
+    Due to Django's templating nature, the navbar HTML only occurs once, in the base template. This prevents manual adding of an "active" class to the link currently on.
+
+    **Fix**: 
+    
+    Wrap all ```<li>``` items in nav list in ```{% with url_name=request.resolver_match.url_name %}```. Then run ```{% if ... %}``` check on each list item to see if URL name matches URL patch and if so, append "active" class ([Reference](https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar)).
 
 
 ### Unfixed bugs

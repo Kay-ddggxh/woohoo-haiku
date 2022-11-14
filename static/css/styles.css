@@ -101,11 +101,15 @@ nav {
 }
 
 .nav-list {
-    margin-left: 70%;
+    margin-left: 60%;
 }
 
 .nav-item {
     margin-left: .5em;
+}
+
+.nav-item_active>a {
+    color: #000;
 }
 
 .nav-link {
