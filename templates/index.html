@@ -6,9 +6,13 @@
     Do you like poetry and playing with words? Do you enjoy crafting 
     images via verbal means? Then this little site is for you. <br>
     Here you can write your own haikus, read other's and even join in their creative process by 
-    extending their haikus into a tanka in a call-and-response fashion. Just sign up and you're good to go.<br>
+    extending their haikus into a tanka in a call-and-response fashion. Just 
+    <a href="{% url 'account_signup' %}">Sign Up</a> and you're good to go.<br>
     Not familiar with haikus and tanka formats? No worries. Once you're logged in you can head over to the 
-    <a href="{% url 'create_haiku' %}">Create page</a> where you'll find simple instructions.<br>
+    {% if user.is_authenticated %}
+    <a href="{% url 'create_haiku' %}">Create page</a>
+    {% else %}Create page
+    {% endif %} where you'll find simple instructions.<br>
     Happy writing!
     </p>
 </div>
