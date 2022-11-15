@@ -1,7 +1,6 @@
 :root {
     --primary-color: #e91c32;
     --p-color-opaque: rgb(233, 28, 50, .6);
-    font-size: 18px;
 }
 
 *,
@@ -31,7 +30,11 @@
 /* General styling */
 
 body {
-    position: relative;
+    background-color: #fff;
+    font-size: 1.25em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .background-img::before {
@@ -79,6 +82,7 @@ p {
 
 main {
     margin: 0 5vw;
+    margin-bottom: 3em;
 }
 
 /* Navigation styling */
@@ -175,7 +179,7 @@ nav {
 footer {
     background-color: var(--p-color-opaque);
     box-shadow: 0px -3px 14px 15px var(--p-color-opaque);
-    margin-top: 3rem;
+    margin-top: auto;
 }
 
 .social-link {
