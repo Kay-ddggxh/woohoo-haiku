@@ -20,7 +20,8 @@
 <h2>Browse Haikus</h2>
 
 <!-- Btn group to filter haikus by tag -->
-<div class="filter-btn-group">
+<p>Filter haikus by tagname:</p>
+<div class="container-fluid filter-btn-group">
     <a href="{% url 'home' %}" role="button" class="tag-link">All haikus</a>
 {% for item in tag_items %}
     <a href="{% url 'tag_list' item %}" 
