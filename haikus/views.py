@@ -13,6 +13,12 @@ class HaikuList(generic.ListView):
     template_name = 'index.html'
     # paginate_by = 10
 
+    def get_context_data(self, *args, **kwargs):
+        tag_items = Tag.objects.all()
+        context = super(HaikuList, self).get_context_data(*args, **kwargs)
+        context["tag_items"] = tag_items
+        return context
+
 
 class HaikuDetail(View):
     def get(self, request, slug, *args, **kwargs):
@@ -122,17 +128,17 @@ class DeleteHaiku(DeleteView):
     success_url = reverse_lazy('home')
 
 
-def TagList(request, tags):
+def TagList(request, tag):
     """ function view to filter haikus by
     specific tags
     """
     # all haiku entries with the same tag
-    tag_haikus = Haiku.objects.filter(tag=tags)
+    tag_haikus = Haiku.objects.filter(tag=tag)
 
     return render(
         request,
         "tag_list.html",
         {
-            "tags": tags,
+            "tag": tag,
             "tag_haikus": tag_haikus
         })
