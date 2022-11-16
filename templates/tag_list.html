@@ -1,30 +1,13 @@
 {% extends "base.html" %}
-
 {% block content %}
-<div class="container-fluid intro-text">
-    <p class="mb-5">
-    Do you like poetry and playing with words? Do you enjoy crafting 
-    images via verbal means? Then this little site is for you. <br>
-    Here you can write your own haikus, read other's and even join in their creative process by 
-    extending their haikus into a tanka in a call-and-response fashion. Just 
-    <a href="{% url 'account_signup' %}">Sign Up</a> and you're good to go.<br>
-    Not familiar with haikus and tanka formats? No worries. Once you're logged in you can head over to the 
-    {% if user.is_authenticated %}
-    <a href="{% url 'create_haiku' %}">Create page</a>
-    {% else %}Create page
-    {% endif %} where you'll find simple instructions.<br>
-    Happy writing!
-    </p>
-</div>
+{% load crispy_forms_tags %}
 
-<h2>Browse Haikus</h2>
+<p>Read all haikus tagged with</p>
+<h2>"{{ tags }}"</h2>
 
-
-
-<!-- Haiku listing -->
 <div class="container-fluid">
     <div class="row d-flex justify-content-evenly">
-        {% for haiku in haiku_list %}
+        {% for haiku in tag_haikus %}
         <div class="col-md-5 p-3 m-3 haiku-card">
             <a href="{% url 'haiku_detail' haiku.slug %}" class="haiku-card_link">
                 <h3>
@@ -52,5 +35,6 @@
         {% endfor %}
     </div>
 </div>
+
 
 {% endblock %}

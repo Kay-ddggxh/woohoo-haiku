@@ -3,7 +3,7 @@ from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
-from .models import Haiku, Tanka
+from .models import Haiku, Tanka, Tag
 from .forms import HaikuForm, TankaForm
 
 
@@ -120,3 +120,19 @@ class DeleteHaiku(DeleteView):
     model = Haiku
     template_name = 'delete_haiku.html'
     success_url = reverse_lazy('home')
+
+
+def TagList(request, tags):
+    """ function view to filter haikus by
+    specific tags
+    """
+    # all haiku entries with the same tag
+    tag_haikus = Haiku.objects.filter(tag=tags)
+
+    return render(
+        request,
+        "tag_list.html",
+        {
+            "tags": tags,
+            "tag_haikus": tag_haikus
+        })
