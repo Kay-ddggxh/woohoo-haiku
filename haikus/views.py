@@ -128,17 +128,19 @@ class DeleteHaiku(DeleteView):
     success_url = reverse_lazy('home')
 
 
-def TagList(request, tag):
-    """ function view to filter haikus by
+class TagList(View):
+    """
+    function view to filter haikus by
     specific tags
     """
-    # all haiku entries with the same tag
-    tag_haikus = Haiku.objects.filter(tag=tag)
+    def get(self, request, tag):
+        # all haiku entries with the same tag
+        tag_haikus = Haiku.objects.filter(tag=tag)
 
-    return render(
-        request,
-        "tag_list.html",
-        {
-            "tag": tag,
-            "tag_haikus": tag_haikus
-        })
+        return render(
+            request,
+            "tag_list.html",
+            {
+                "tag": tag,
+                "tag_haikus": tag_haikus
+            })

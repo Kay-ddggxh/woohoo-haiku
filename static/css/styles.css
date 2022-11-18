@@ -325,7 +325,13 @@ footer {
     margin: 0 .3em;
     border-radius: 5px;
     border: none;
-    background-color: rgba(133, 170, 255, .4);
+    background-color: rgb(193, 211, 255);
+}
+
+.back-btn {
+    display: block;
+    margin: 2em auto;
+    width: fit-content;
 }
 
 .delete-btn {
