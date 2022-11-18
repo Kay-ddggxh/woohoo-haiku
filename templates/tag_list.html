@@ -7,6 +7,11 @@
 
 <div class="container-fluid">
     <div class="row d-flex justify-content-evenly">
+    {% if tag_haikus.count == 0 %}
+        <p>There are no haikus tagged with "{{ tag }}" yet.<br>
+            Maybe you could change that...?
+        </p>
+    {% else %}
         {% for haiku in tag_haikus %}
         <div class="col-md-5 p-3 m-3 haiku-card">
             <a href="{% url 'haiku_detail' haiku.slug %}" class="haiku-card_link">
@@ -33,6 +38,7 @@
             </div>
         </div>
         {% endfor %}
+    {% endif %}
     </div>
 </div>
 

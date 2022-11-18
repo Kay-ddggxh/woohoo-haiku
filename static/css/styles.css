@@ -33,6 +33,7 @@ body {
     background-color: #fff;
     font-size: 1.25em;
     min-height: 100vh;
+    margin: 0 2vw;
     display: flex;
     flex-direction: column;
 }
@@ -151,6 +152,7 @@ nav {
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: #fff;
+    max-width: 440px;
 }
 
 .haiku-card:hover {
