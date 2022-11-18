@@ -317,6 +317,7 @@ footer {
 .edit-btn,
 .delete-btn,
 .cancel-btn,
+.back-btn,
 .tag-link {
     text-decoration: none;
     color: #000;
