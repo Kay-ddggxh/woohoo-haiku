@@ -56,6 +56,9 @@
                         <a class="nav-link" href="{% url 'home' %}">Browse</a>
                     </li>
                     {% if user.is_authenticated %}
+                    <li class="nav-item {% if url_name == 'user_haikus' %}nav-item_active{% endif %}">
+                        <a class="nav-link" href="{% url 'user_haikus' %}">My Haikus</a>
+                    </li>
                     <li class="nav-item {% if url_name == 'create_haiku' %}nav-item_active{% endif %}">
                         <a class="nav-link" href="{% url 'create_haiku' %}">Create</a>
                     </li>

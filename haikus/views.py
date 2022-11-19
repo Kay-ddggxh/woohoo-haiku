@@ -144,3 +144,10 @@ class TagList(View):
                 "tag": tag,
                 "tag_haikus": tag_haikus
             })
+
+
+class UserHaikus(generic.ListView):
+    model = Haiku
+    queryset = Haiku.objects.order_by('-create_date')
+    template_name = 'user_haikus.html'
+    # paginate_by = 10

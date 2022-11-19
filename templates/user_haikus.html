@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>My Haikus</h2>
+
+<!-- Haiku listing -->
+<div class="container-fluid">
+    <div class="row d-flex justify-content-evenly">
+    {% for haiku in haiku_list %}
+        {% if user.id == haiku.author.id %}
+            <div class="col-md-5 p-3 m-3 haiku-card">
+                <a href="{% url 'haiku_detail' haiku.slug %}" class="haiku-card_link">
+                    <h3>
+                        {{ haiku.title }}
+                    </h3>
+                    <div class="d-flex justify-content-around">
+                        <div class="author">by {{ haiku.author }}</div>
+                        <div class="tag-label fw-bold">{{ haiku.tag }}</div>
+                    </div>
+                </a>
+                <div class="likes-tankas-numbers mt-2">
+                    <span class="likes-num">{{ haiku.number_of_likes }}
+                        <iconify-icon inline icon="emojione:cherry-blossom"></iconify-icon>
+                    </span>
+                    <span class="tankas-num">
+                        
+                        {{ haiku.tankas.count }}
+                        
+                        <iconify-icon inline icon="uil:comment-image" style="color: #ff506e;"></iconify-icon>
+                        
+                    </span>
+                    
+                </div>
+            </div>
+        {% else %}
+            {% if forloop.first %}
+                <p>
+                    You haven't created any haikus yet.<br>
+                    Time to grab a proverbial pen and play with words!
+                </p>  
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
