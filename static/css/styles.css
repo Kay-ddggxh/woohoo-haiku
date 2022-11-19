@@ -89,7 +89,7 @@ main {
 
 /* Navigation styling */
 
-nav {
+.navbar {
     background-color: var(--p-color-opaque);
     box-shadow: 0px -3px 14px 15px var(--p-color-opaque);
 }
@@ -318,7 +318,8 @@ footer {
 .delete-btn,
 .cancel-btn,
 .back-btn,
-.tag-link {
+.tag-link,
+.page-link {
     text-decoration: none;
     color: #000;
     padding: .3em .6em;
@@ -342,7 +343,8 @@ footer {
     background-color: rgba(14, 143, 0, .4);
 }
 
-.tag-link {
+.tag-link,
+.page-link {
     display: block;
     width: fit-content;
     background-color: rgb(200, 200, 200);

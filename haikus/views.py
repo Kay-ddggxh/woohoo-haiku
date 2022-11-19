@@ -11,7 +11,7 @@ class HaikuList(generic.ListView):
     model = Haiku
     queryset = Haiku.objects.order_by('-create_date')
     template_name = 'index.html'
-    # paginate_by = 10
+    paginate_by = 6
 
     def get_context_data(self, *args, **kwargs):
         tag_items = Tag.objects.all()
@@ -150,4 +150,3 @@ class UserHaikus(generic.ListView):
     model = Haiku
     queryset = Haiku.objects.order_by('-create_date')
     template_name = 'user_haikus.html'
-    # paginate_by = 10
