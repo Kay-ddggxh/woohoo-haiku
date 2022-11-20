@@ -341,6 +341,7 @@ footer {
 
 .cancel-btn {
     background-color: rgba(14, 143, 0, .4);
+    padding: 0.35em 0.6em
 }
 
 .tag-link,

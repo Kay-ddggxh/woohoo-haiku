@@ -11,7 +11,10 @@
     <form method="POST" class="haiku-form">
         {% csrf_token %}
         {{ form.as_p | safe }}
-        <button type="submit" class="edit-btn">Edit</button>
+        <div class="update-btn-group">
+            <button type="submit" class="edit-btn">Edit</button>
+            <a href="{% url 'home' %}" role="button" class="cancel-btn">Cancel</a>
+        </div>
     </form>
 {% endif %}
 
