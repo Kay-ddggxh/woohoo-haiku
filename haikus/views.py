@@ -147,6 +147,10 @@ class TagList(View):
 
 
 class UserHaikus(generic.ListView):
+    """
+    Displays all haikus submitted only by
+    currently authenticated user
+    """
     model = Haiku
     queryset = Haiku.objects.order_by('-create_date')
     template_name = 'user_haikus.html'

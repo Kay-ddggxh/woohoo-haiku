@@ -51,17 +51,16 @@
                     <iconify-icon inline icon="emojione:cherry-blossom"></iconify-icon>
                 </span>
                 <span class="tankas-num">
-                    
-                    {{ haiku.tankas.count }}
-                    
-                    <iconify-icon inline icon="uil:comment-image" style="color: #ff506e;"></iconify-icon>
-                    
+                    {{ haiku.approved_tankas.count }} 
+                    <iconify-icon inline icon="uil:comment-image" style="color: #ff506e;"></iconify-icon> 
                 </span>
                 
             </div>
         </div>
         {% endfor %}
     </div>
+
+    <!-- Pagination -->
     {% if is_paginated %}
     <nav aria-label="Page navigation" class="page-nav">
         <ul class="pagination justify-content-center">

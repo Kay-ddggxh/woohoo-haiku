@@ -17,8 +17,6 @@ class Haiku(models.Model):
     likes = models.ManyToManyField(
         User, related_name='haiku_like', blank=True)
     tag = models.CharField(max_length=80, default="Tag your haiku")
-    # bg_image = CloudinaryField('image', default='placeholder')
-    # possibly user uploaded image
 
     class Meta:
         ordering = ['-create_date']
@@ -29,6 +27,10 @@ class Haiku(models.Model):
     def number_of_likes(self):
         # helper method to return total num of likes on post
         return self.likes.count()
+
+    def approved_tankas(self):
+        # helper method to return number of approved tankas only
+        return self.tankas.filter(approved=True)
 
     def save(self, *args, **kwargs):
         # helper method to generate slug for haikus submitted

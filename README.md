@@ -64,11 +64,16 @@ The code to add conditional pagination to the ``index`` template, including page
     Include ``{% if forloop.first %}`` statement to insure message is only displayed after the first iteration of the for loop ([Reference](https://stackoverflow.com/a/46927971)).
 
 
-### Unfixed bugs
-
 - **Tanka count on homepage**:
 
-    The tanka counter of each haiku entry on the homepage displays the number off all submitted tankas when it should only count approved submits
+    The tanka counter of each haiku entry on the homepage displays the number of all submitted tankas when it should only count approved submits.
+
+    **Fix**:
+
+    Add helper method ``approved_tankas`` to ``Haiku`` model which filters tankas by approval status ``True``. This method can then be referenced in index.html template. ([Reference](https://github.com/DjangoGirls/tutorial-extensions/issues/39#issuecomment-276360075)).
+
+
+### Unfixed bugs
 
 - **Select option in Haiku form not disabled**:
 

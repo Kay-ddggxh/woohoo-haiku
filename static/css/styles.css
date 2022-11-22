@@ -211,7 +211,7 @@ footer {
 }
 
 .auth-btn,
-.tanka-btn {
+.submit-btn {
     padding: .3em .6em;
     background-color: #fff;
     border: none;
@@ -221,6 +221,12 @@ footer {
 
 
 /* Haiku form and Tanka form/content styling */
+
+textarea,
+input,
+select {
+    margin: 0 auto;
+}
 
 .tanka-form {
     display: flex;
@@ -236,7 +242,8 @@ footer {
     border-radius: 5px;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
     height: 7em;
-    width: 19em;
+    width: 95vw;
+    max-width: 19em;
     padding: 1em;
     margin-bottom: 1em;
     font-family: 'Quicksand', sans-serif;
@@ -246,7 +253,7 @@ footer {
 .haiku-form input,
 .haiku-form select {
     height: auto;
-    width: 90%;
+    width: 100%;
     line-height: 1.8;
 }
 
@@ -259,7 +266,7 @@ footer {
     display: none;
 }
 
-.tanka-btn,
+.submit-btn,
 .update-btn-group {
     width: fit-content;
     display: block;
@@ -305,6 +312,11 @@ footer {
 }
 
 /* Button styling */
+
+button:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 200ms;
+}
 
 .filter-btn-group {
     width: 100%;
