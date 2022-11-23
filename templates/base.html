@@ -123,6 +123,15 @@
             alert.close();
         }, 3000)
     </script>
+    
+    <!-- Add placeholder attributes to 1st option in tag select field -->
+    <script>
+        let tag_select_el = document.getElementById("id_tag");
+        let placeholder_el = tag_select_el[0];
+        placeholder_el.setAttribute("disabled", "");
+        placeholder_el.setAttribute("selected", "");
+        placeholder_el.setAttribute("hidden", "")
+    </script>
 
     </body>
 

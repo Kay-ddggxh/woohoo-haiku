@@ -5,6 +5,8 @@ choises = Tag.objects.all().values_list('tagname', 'tagname')
 
 CHOICE_LIST = []
 
+CHOICE_LIST.append(("placeholder", "Tag your haiku appropriately"))
+
 for choice in choises:
     CHOICE_LIST.append(choice)
 

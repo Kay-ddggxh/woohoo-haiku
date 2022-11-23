@@ -73,11 +73,19 @@ The code to add conditional pagination to the ``index`` template, including page
     Add helper method ``approved_tankas`` to ``Haiku`` model which filters tankas by approval status ``True``. This method can then be referenced in index.html template. ([Reference](https://github.com/DjangoGirls/tutorial-extensions/issues/39#issuecomment-276360075)).
 
 
-### Unfixed bugs
-
 - **Select option in Haiku form not disabled**:
 
-    The select option in the haiku form with value "Tag your haiku" is not disabled and could potentially be selected as a tag option.
+    The select option in the haiku form with value "Tag your haiku appropriately" is not disabled and could potentially be selected as a tag option.
+
+    **Fix**:
+
+    Set first select option (now has index 0) of haiku form manually to "Tag your haiku appropriately" with value "placeholder" in ``forms.py``.
+    Then target option with index 0 via JavaScript in ``base.html`` and add necessary attributes ``disabled``, ``selected`` and ``hidden``.
+
+
+### Unfixed bugs
+
+
 
 - **Haiku update form showing html for admin**:
 
