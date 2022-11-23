@@ -1,6 +1,5 @@
 from django.contrib import admin
 from .models import Haiku, Tanka, Tag
-from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Haiku)

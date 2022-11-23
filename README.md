@@ -83,8 +83,15 @@ The code to add conditional pagination to the ``index`` template, including page
     Then target option with index 0 via JavaScript in ``base.html`` and add necessary attributes ``disabled``, ``selected`` and ``hidden``.
 
 
-### Unfixed bugs
-
 - **Haiku update form showing html for admin**:
 
     When editing a haiku as an admin user, the haiku content renders html tags and attributes in the textarea of the edit form
+
+    **Fix**:
+
+    Remove Summernote formatting from admin Haiku and Tanka form. As for this project, the extra formatting Summernote provides is unnecessary and even upset the formatting of haiku entries made by admin users as well as the respective haiku edit form.
+
+
+### Unfixed bugs
+
+
