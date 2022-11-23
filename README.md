@@ -85,8 +85,6 @@ The code to add conditional pagination to the ``index`` template, including page
 
 ### Unfixed bugs
 
-
-
 - **Haiku update form showing html for admin**:
 
     When editing a haiku as an admin user, the haiku content renders html tags and attributes in the textarea of the edit form

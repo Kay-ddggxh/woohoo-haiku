@@ -48,7 +48,7 @@ class Tanka(models.Model):
     name = models.CharField(max_length=60)
     body = models.TextField()
     create_date = models.DateField(auto_now_add=True)
-    approved = models.BooleanField(default=False)   # user approved
+    approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-create_date']
