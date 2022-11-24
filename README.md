@@ -13,6 +13,16 @@ This Django project is a little poetry blog that can turn into a call-and-respon
     - [CRUD](#crud)
 
 - [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Future Features](#possible-future-features)
+
+- [UX](#ux)
+    - [Site Goals](#site-goals)
+    - [User Stories](#user-stories)
+
+- [Testing](#testing)
+    - [Fixed Bugs](#fixed-bugs)
+    - [Unfixed Bugs](#unfixed-bugs)
 
 - [Source Credits](#source-credits)
     - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
@@ -60,12 +70,12 @@ The exception are various call-to-action-buttons which follow the traditional si
 **Fonts:**
 
 Fonts were chosen to convey Asian/Japanese visuals. 
-For full despcription of font names and their sources see [Source Credits](#source-credits)
+For full despcription of font names and their sources see [Media and Styling](#media-and-styling)
 
 **Images:**
 
 All images used depict classic Japanese artistic elements such as koi, cherry blossom and finger waves.
-For full despcription of all images and their sources see [Source Credits](#source-credits)
+For full despcription of all images and their sources see [Media and Styling](#media-and-styling)
 
 ### CRUD
 
@@ -85,40 +95,17 @@ An authenticated user can delete their own saved entries.
 
 ## Features
 
-## Source Credits
+### Existing Features
 
-### References/Documentation/Tutorials
+### Possible Future Features
 
-#### Django Practices and Syntax
+## UX
 
-**General**:
+### Site Goals
 
-The official [Django Documentation](https://docs.djangoproject.com/en/4.1/) was used throughout creating this project.
+### User Stories
 
-The skeleton of this project is based on the [Code Institute](https://codeinstitute.net/ie/) tutorials "Hello Django" and "I Think Therefore I Blog".
-
-For further guidance on syntax and implementation of features I also referred to [Codemy Django tutorials](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com) and [Very Academy tutorials](https://www.youtube.com/c/veryacademy/playlists)
-
-**CreateHaiku View**:
-
-The view that enables an authenticated user to add and save their own haiku was created using Django's [CreateView method](https://docs.djangoproject.com/en/4.1/ref/class-based-views/generic-editing/#django.views.generic.edit.CreateView)
-
-**Form Customisation**:
-
-Form customisation was achieved using [Django Widgets](https://docs.djangoproject.com/en/dev/ref/forms/widgets/). 
-
-The syntax for adding a form select field was inspired by a [Codemy tutorial](https://www.youtube.com/watch?v=_ph8GF84fX4&ab_channel=Codemy.com) 
-
-**Haiku categories and filter option**:
-
-The option to filter haikus by tagname was implemented following this [Codemy tutorial](https://www.youtube.com/watch?v=2MkULPXXXLk&ab_channel=Codemy.com). The UI for this functionality was altered to display in the form of a button group rather than nav links.
-
-**Main page pagination**
-
-The code to add conditional pagination to the ``index`` template, including page navigation links was taken as Django and Bootstrap boilerplate from [Code Institute source code](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/06_creating_our_first_view/templates/index.html). Styling was customised. 
-
-
-## Bugs
+## Testing
 
 ### Fixed bugs
 
@@ -180,5 +167,55 @@ The code to add conditional pagination to the ``index`` template, including page
 ### Unfixed bugs
 
 There are currently no known bugs 😀
+
+## Source Credits
+
+### References/Documentation/Tutorials
+
+**General**:
+
+The official [Django Documentation](https://docs.djangoproject.com/en/4.1/) was used throughout creating this project.
+
+The skeleton of this project is based on the [Code Institute](https://codeinstitute.net/ie/) tutorials "Hello Django" and "I Think Therefore I Blog".
+
+For further guidance on syntax and implementation of features I also referred to [Codemy Django tutorials](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com) and [Very Academy tutorials](https://www.youtube.com/c/veryacademy/playlists)
+
+**CreateHaiku View**:
+
+The view that enables an authenticated user to add and save their own haiku was created using Django's [CreateView method](https://docs.djangoproject.com/en/4.1/ref/class-based-views/generic-editing/#django.views.generic.edit.CreateView)
+
+**Form Customisation**:
+
+Form customisation was achieved using [Django Widgets](https://docs.djangoproject.com/en/dev/ref/forms/widgets/). 
+
+The syntax for adding a form select field was inspired by a [Codemy tutorial](https://www.youtube.com/watch?v=_ph8GF84fX4&ab_channel=Codemy.com) 
+
+**Haiku categories and filter option**:
+
+The option to filter haikus by tagname was implemented following this [Codemy tutorial](https://www.youtube.com/watch?v=2MkULPXXXLk&ab_channel=Codemy.com). The UI for this functionality was altered to display in the form of a button group rather than nav links.
+
+**Main page pagination**
+
+The code to add conditional pagination to the ``index`` template, including page navigation links was taken as Django and Bootstrap boilerplate from [Code Institute source code](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/06_creating_our_first_view/templates/index.html). Styling was customised. 
+
+### Media and Styling
+
+**Images:**
+
+*Koi nav icon:* [Hani Suwaryo | dreamstime.com](https://www.dreamstime.com/koi-logo-japan-fish-japanese-symbol-background-illustration-vector-stock-koi-logo-japan-fish-japanese-koi-fishes-logo-luck-image114846444 )
+
+*Cherry blossom background image:* [Alofipo | cleanpng.com](https://www.cleanpng.com/png-plum-blossom-red-plum-411432/download-png.html)
+
+*Koi-sun-wave haike tile image:* [pngegg.com](https://www.pngegg.com/en/png-vcqwe )
+
+**Fonts:**
+
+All fonts were taken from [DaFont](https://www.dafont.com/).
+
+*Ninja Warrior:* [Hardiboy Design](https://www.dafont.com/profile.php?user=1278940)
+
+*Dekiru:* [Laura Luppani](https://www.dafont.com/profile.php?user=473885)
+
+
 
 
