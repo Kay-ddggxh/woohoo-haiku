@@ -15,14 +15,14 @@
 
 @font-face {
     font-family: 'NINJAWARRIOR';
-    src: url(https://res.cloudinary.com/kay-ddggxh/raw/upload/v1665506970/NINJAWARRIOR.ttf);
+    src: url(https://res.cloudinary.com/kay-ddggxh/raw/upload/v1665506970/woohoo_haiku/fonts/NINJAWARRIOR.ttf);
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Dekiru';
-    src: url(https://res.cloudinary.com/kay-ddggxh/raw/upload/v1665507352/Dekiru.ttf);
+    src: url(https://res.cloudinary.com/kay-ddggxh/raw/upload/v1665507352/woohoo_haiku/fonts/Dekiru.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -40,7 +40,7 @@ body {
 
 .background-img::before {
     content: "";
-    background-image: url(https://res.cloudinary.com/kay-ddggxh/image/upload/v1668364190/kisspng-plum-blossom-red-plum-flipped-turned.png);
+    background-image: url(https://res.cloudinary.com/kay-ddggxh/image/upload/v1668364190/woohoo_haiku/images/kisspng-plum-blossom-red-plum-flipped-turned.png);
     background-size: cover;
     background-position: center;
     position: fixed;
@@ -147,7 +147,7 @@ main {
     border: 1px solid rgb(223, 223, 223);
     border-radius: 5px;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
-    background-image: url(https://res.cloudinary.com/kay-ddggxh/image/upload/v1665595188/koi-sun-wave.png);
+    background-image: url(https://res.cloudinary.com/kay-ddggxh/image/upload/v1665595188/woohoo_haiku/images/koi-sun-wave.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: right;

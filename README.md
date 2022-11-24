@@ -1,10 +1,95 @@
 # Woohoo Haiku
 
+This Django project is a little poetry blog that can turn into a call-and-response game through user interaction. The main value in it lies to provide fun to those who enjoy poetry, haiku or just playing with words.
+
 [Link to live site](https://woohoo-haiku.herokuapp.com/) 
 
-## References/Documentation/Tutorials
+## Table of Contents
 
-### Django Practices and Syntax
+- [Design](#design)
+    - [Database Model](#database-model)
+    - [Wireframes](#wireframes)
+    - [Visual Design Choices](#visual-design-choices)
+    - [CRUD](#crud)
+
+- [Features](#features)
+
+- [Source Credits](#source-credits)
+    - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
+    
+
+## Design
+
+The overall design of the site is based on the Japanese principle of minimalism and therefore doesn't include a lot of visual variants and distractions.
+
+The general layout, navigation and functionality is plain and intiutive, meeting a user's expectation of any standard blog site.
+
+Features and interactivity are kept to a minimum, as to not overwhelm the user with too many options and to maintain a zen like usage of the site.
+
+### Database Model
+
+The first draft of the entity relationship diagram does not include all models used in the final database.
+
+![ERD](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/ERD-with-tanka.jpg)
+
+### Wireframes
+
+The initial [wireframes in Figma](https://www.figma.com/file/Ajb5EOJLJedDc0v8a0wL67/Woohoo-Haiku) are an overly simplified version of the finished product and merely served the purpose of listing most of the site's essential features.
+
+Not all features and functions are covered by these first drafts. For a full list of existing features see [Features](#features)
+
+![home-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/home.jpg)
+
+![read-haiku-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/read-haiku.jpg)
+
+![browse-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/browse.jpg)
+
+![create-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/create.jpg)
+
+![login-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/login.jpg)
+
+![signup-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/signup.jpg)
+
+### Visual Design Choices
+
+**Colour Scheme:**
+
+In keeping with the minimalist style, the colour scheme utilises only one colour (and variants of different opacity). It is represented throughout the site in background images, navbar and footer.
+The exception are various call-to-action-buttons which follow the traditional signal colours.
+
+**Fonts:**
+
+Fonts were chosen to convey Asian/Japanese visuals. 
+For full despcription of font names and their sources see [Source Credits](#source-credits)
+
+**Images:**
+
+All images used depict classic Japanese artistic elements such as koi, cherry blossom and finger waves.
+For full despcription of all images and their sources see [Source Credits](#source-credits)
+
+### CRUD
+
+The CRUD principle was the heart of the design process for this project. For a detailed description of all CRUD features see [Features](#features)
+
+**Create:**
+An authenticated user can create and save a haiku entry.
+
+**Read:**
+A user can browse and read their own and other users' haiku entries.
+
+**Update:**
+An authenticated user can edit and update their own saved entries.
+
+**Delete:**
+An authenticated user can delete their own saved entries.
+
+## Features
+
+## Source Credits
+
+### References/Documentation/Tutorials
+
+#### Django Practices and Syntax
 
 **General**:
 
