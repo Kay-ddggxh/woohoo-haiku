@@ -94,4 +94,6 @@ The code to add conditional pagination to the ``index`` template, including page
 
 ### Unfixed bugs
 
+There are currently no known bugs 😀
+
 
