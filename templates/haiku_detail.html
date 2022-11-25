@@ -31,7 +31,7 @@
         <span class="likes-number">{{ haiku.number_of_likes }}</span>
         <span class="tankas-num">
             <iconify-icon inline icon="uil:comment-image" style="color: #ff506e;" width="20"></iconify-icon>
-                {{ tanka_count }}
+                {{ haiku.approved_tankas.count }} 
         </span>
     </div>
 
@@ -50,7 +50,7 @@
     {% for tanka in tankas %}
         {% if tanka.approved %}
             <div class="tanka">
-                {{ tanka.body | safe }}
+                {{ tanka.body | safe | linebreaks }}
                 <div class="tanka-author">
                     by {{ tanka.name }}
                 </div>

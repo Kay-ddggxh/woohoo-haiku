@@ -25,7 +25,6 @@ class HaikuDetail(View):
         queryset = Haiku.objects
         haiku = get_object_or_404(queryset, slug=slug)
         tankas = haiku.tankas.order_by('create_date')
-        tanka_count = Tanka.objects.filter(approved=True).count()
         liked = False
         if haiku.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -39,7 +38,6 @@ class HaikuDetail(View):
                 "tanka_added": False,
                 "liked": liked,
                 "tanka_form": TankaForm(),
-                "tanka_count": tanka_count
             },
         )
 
