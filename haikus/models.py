@@ -4,6 +4,16 @@ from django.template.defaultfilters import slugify
 from cloudinary.models import CloudinaryField
 
 
+class Tag(models.Model):
+    """
+    Defines tag (category) object
+    """
+    tagname = models.CharField(max_length=80)
+
+    def __str__(self):
+        return self.tagname
+
+
 class Haiku(models.Model):
     """
     Defines Haiku object
@@ -16,7 +26,9 @@ class Haiku(models.Model):
     create_date = models.DateField(auto_now_add=True)
     likes = models.ManyToManyField(
         User, related_name='haiku_like', blank=True)
-    tag = models.CharField(max_length=80, default="Tag your haiku")
+    # tag = models.CharField(max_length=80, default="Tag your haiku")
+    tag = models.ForeignKey(
+        Tag, on_delete=models.PROTECT, default=1, related_name="tag")
 
     class Meta:
         ordering = ['-create_date']
@@ -55,13 +67,3 @@ class Tanka(models.Model):
 
     def __str__(self):
         return f"{self.name} made this into a tanka: {self.body}"
-
-
-class Tag(models.Model):
-    """
-    Defines tag (category) object
-    """
-    tagname = models.CharField(max_length=80)
-
-    def __str__(self):
-        return self.tagname

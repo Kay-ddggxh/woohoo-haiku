@@ -30,3 +30,6 @@ class HaikuAdmin(admin.ModelAdmin):
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
     pass
+
+
+# admin.site.register(models.Tag)
