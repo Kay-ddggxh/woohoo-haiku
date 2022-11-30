@@ -47,6 +47,9 @@
 
 <!-- Already added tanka extensions -->
 <p class="h3 my-4">See how other people continued this poem</p>
+{% if haiku.approved_tankas.count == 0 %}
+<p>Nobody has extended this haiku yet.</p>
+{% else %}
     {% for tanka in tankas %}
         {% if tanka.approved %}
             <div class="tanka">
@@ -57,7 +60,7 @@
             </div>
         {% endif %}
     {% endfor %}
-
+{% endif %}
 
     {% if tanka_added %}
         <!-- Alert to wait for tanka approval -->
