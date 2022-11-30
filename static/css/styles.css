@@ -38,7 +38,8 @@ body {
 }
 
 .background-img {
-    width: 98vw;
+    width: 100vw;
+    padding: 0 2vw;
 }
 
 .background-img::before {
@@ -171,12 +172,14 @@ main {
 /* Haiku Detail styling */
 
 .haiku-content {
+    font-size: 1.5rem;
     width: fit-content;
     padding: 1em;
     margin: 2rem auto;
     border: 1px solid rgb(223, 223, 223);
     border-radius: 5px;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
 }
 
 
@@ -283,8 +286,10 @@ select {
 }
 
 .tanka {
+    font-size: 1.4rem;
     height: auto;
     margin-top: 1.5em;
+    background-color: #fff;
 }
 
 .tanka-author {
