@@ -128,12 +128,10 @@ class DeleteHaiku(DeleteView):
 
 class TagList(View):
     """
-    function view to filter haikus by
-    specific tags
+    view to filter haikus by specific tags
     """
     def get(self, request, tag):
-        # all haiku entries with the same tag
-        tag_haikus = Haiku.objects.filter(tag=tag)
+        tag_haikus = Haiku.objects.filter(tag__tagname=self.kwargs['tag'])
 
         return render(
             request,

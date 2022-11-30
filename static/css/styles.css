@@ -33,9 +33,12 @@ body {
     background-color: #fff;
     font-size: 1.25em;
     min-height: 100vh;
-    margin: 0 2vw;
     display: flex;
     flex-direction: column;
+}
+
+.background-img {
+    width: 98vw;
 }
 
 .background-img::before {

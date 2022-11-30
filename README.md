@@ -147,12 +147,20 @@ An authenticated user can delete their own saved entries.
 
 - **Select option in Haiku form not disabled**:
 
-    The select option in the haiku form with value "Tag your haiku appropriately" is not disabled and could potentially be selected as a tag option.
+    The select option in the haiku form with value "Tag your haiku" is not disabled and could potentially be selected as a tag option.
 
     **Fix**:
 
-    Set first select option (now has index 0) of haiku form manually to "Tag your haiku appropriately" with value "placeholder" in ``forms.py``.
-    Then target option with index 0 via JavaScript in ``base.html`` and add necessary attributes ``disabled``, ``selected`` and ``hidden``.
+    Target option with text value "Tag your haiku" via JavaScript in ``base.html`` and add necessary attributes ``disabled``, ``selected`` and ``hidden``.
+
+
+- **Placeholder tag shows as link on homepage**:
+
+    The placeholder tag with text value "Tag your haiku" shows as a link in the tag button group on the homepage but shouldn't.
+
+    **Fix**:
+
+    Use JavaScript to loop through all elements with class of ``tag-link``, select the one with ``innerText`` value of "Tag your haiku" and change style to ``display: none``. 
 
 
 - **Haiku update form showing html for admin**:

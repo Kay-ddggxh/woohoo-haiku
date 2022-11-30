@@ -10,5 +10,5 @@ urlpatterns = [
     path('<slug:slug>/', views.HaikuDetail.as_view(), name='haiku_detail'),
     path('update/<slug:slug>', views.UpdateHaiku.as_view(), name='update'),
     path('delete/<slug:slug>', views.DeleteHaiku.as_view(), name='delete'),
-    path('tag_list/<str:tag>/', views.TagList.as_view(), name="tag_list"),
+    path('tag_list/<tag>/', views.TagList.as_view(), name="tag_list"),
 ]

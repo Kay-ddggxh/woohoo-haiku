@@ -1,14 +1,12 @@
 from .models import Haiku, Tanka, Tag
 from django import forms
 
-choises = Tag.objects.all().values_list('tagname', 'tagname')
+# choises = Tag.objects.all().values_list('tagname', 'tagname')
 
-CHOICE_LIST = []
+# CHOICE_LIST = []
 
-CHOICE_LIST.append(("placeholder", "Tag your haiku appropriately"))
-
-for choice in choises:
-    CHOICE_LIST.append(choice)
+# # for choice in choises:
+# #     CHOICE_LIST.append(choice)
 
 
 class HaikuForm(forms.ModelForm):
@@ -22,7 +20,7 @@ class HaikuForm(forms.ModelForm):
 
         widgets = {
             'title': forms.TextInput(attrs={'placeholder': 'Enter a title'}),
-            'tag': forms.Select(choices=CHOICE_LIST),
+            'tag': forms.Select(),
             'content': forms.Textarea(
                 attrs={'placeholder': 'Write Haiku here'})
         }

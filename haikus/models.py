@@ -26,7 +26,6 @@ class Haiku(models.Model):
     create_date = models.DateField(auto_now_add=True)
     likes = models.ManyToManyField(
         User, related_name='haiku_like', blank=True)
-    # tag = models.CharField(max_length=80, default="Tag your haiku")
     tag = models.ForeignKey(
         Tag, on_delete=models.PROTECT, default=1, related_name="tag")
 
@@ -37,16 +36,22 @@ class Haiku(models.Model):
         return self.title
 
     def number_of_likes(self):
-        # helper method to return total num of likes on post
+        """
+        helper method to return total num of likes on post
+        """
         return self.likes.count()
 
     def approved_tankas(self):
-        # helper method to return number of approved tankas only
+        """
+        helper method to return number of approved tankas only
+        """
         return self.tankas.filter(approved=True)
 
     def save(self, *args, **kwargs):
-        # helper method to generate slug for haikus submitted
-        # by non-admin users
+        """
+        helper method to generate slug for haikus submitted
+        by non-admin users
+        """
         self.slug = slugify(self.title)
         super(Haiku, self).save(*args, **kwargs)
 

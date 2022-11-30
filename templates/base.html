@@ -126,11 +126,24 @@
     
     <!-- Add placeholder attributes to 1st option in tag select field -->
     <script>
-        let tag_select_el = document.getElementById("id_tag");
-        let placeholder_el = tag_select_el[0];
-        placeholder_el.setAttribute("disabled", "");
-        placeholder_el.setAttribute("selected", "");
-        placeholder_el.setAttribute("hidden", "")
+        let tag_el = document.getElementById("id_tag");
+        for (let option of tag_el) {
+            if (option.text === "Tag your haiku") {
+                option.setAttribute("disabled", "");
+                option.setAttribute("selected", "");
+                option.setAttribute("hidden", "");
+            }
+        }
+    </script>
+
+    <!-- Hide tag link with placeholder text on homepage -->
+    <script>
+        let tag_btns = document.getElementsByClassName("tag-link");
+        for (let tag_btn of tag_btns) {
+            if (tag_btn.innerText === "Tag your haiku") {
+                tag_btn.style.display = "none";
+            }
+        }   
     </script>
 
     </body>
