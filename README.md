@@ -21,6 +21,13 @@ Much like a regular blog site, a registered user can submit posts, like and comm
     - [Database Model](#database-model)
     - [CRUD](#crud)
 
+- [Technologies Used](#technologies-used)
+    - [Work Environments and Hosting](#work-environments-and-hosting)
+    - [Python Libraries](#python-libraries)
+    - [Django Libraries](#django-libraries)
+    - [External Libraries](#external-libraries-and-applications)
+    - [Database](#database) !!! ToDo !!!
+
 - [Testing](#testing)
     - [Fixed Bugs](#fixed-bugs)
     - [Unfixed Bugs](#unfixed-bugs)
@@ -44,17 +51,18 @@ The initial [wireframes in Figma](https://www.figma.com/file/Ajb5EOJLJedDc0v8a0w
 
 Not all features and functions are covered by these first drafts. For a full list of existing features see [Features](#features)
 
-![home-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/home.jpg)
+<details>
+    <summary>
+        Wireframe images
+    </summary>
+    <img src="https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/home.jpg" alt="home-wireframe">
+    <img src="https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/read-haiku.jpg" alt="haiku-wireframe">
+    <img src="https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/browse.jpg" alt="browse-wireframe">
+    <img src="https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/create.jpg" alt="create-wireframe">
+    <img src="https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/login.jpg" alt="login-wireframe">
+    <img src="https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/signup.jpg" alt="signup-wireframe">
+</details>
 
-![read-haiku-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/read-haiku.jpg)
-
-![browse-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/browse.jpg)
-
-![create-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/create.jpg)
-
-![login-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/login.jpg)
-
-![signup-wireframe](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/signup.jpg)
 
 ### Visual Design Choices
 
@@ -127,6 +135,33 @@ An authenticated user can edit and update their own saved entries.
 
 **Delete:**
 An authenticated user can delete their own saved entries.
+
+## Technologies Used
+
+### Work Environments and Hosting
+
+- [Figma](https://www.figma.com/) (Wireframes)
+- [Lucid](https://lucid.app/) (ERD diagrams)
+- [GitHub](https://github.com/) (Version control)
+- [GitPod](https://gitpod.io/) (IDE)
+- [Heroku](https://heroku.com/) (Site hosting)
+- [Cloudinary](https://cloudinary.com/) (Serving static media files)
+
+### Python Libraries
+
+- [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/) (Python HTTP server for WSGI applications)
+
+### Django Libraries
+
+- [django-allauth](https://django-allauth.readthedocs.io/en/latest/) (User authentication)
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) (Control rendering behaviour of Django forms)
+
+### External Libraries and Applications
+
+- [Whitenoise](https://whitenoise.evans.io/en/latest/) (Serving static non-media files)
+- [Summernote](https://summernote.org/) (WYSIWYG editor - currently not utilised but installed for possible future use)
+
+### Database
 
 ## Testing
 
