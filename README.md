@@ -1,24 +1,25 @@
 # Woohoo Haiku
 
 This Django project is a little poetry blog that can turn into a call-and-response game through user interaction. The main value in it lies to provide fun to those who enjoy poetry, haiku or just playing with words.
+Much like a regular blog site, a registered user can submit posts, like and comment on other users' posts. However, the posts and comments are meant to follow the [Haiku/Tanka format](https://poetry4kids.com/lessons/how-to-write-a-tanka-poem/). Thus, the original post will be a haiku. Other users can then add two more lines to extend it into a tanka, whilst trying to capture and maintain the feel of the original post and understand the authors subject and intent.
 
 [Link to live site](https://woohoo-haiku.herokuapp.com/) 
 
 ## Table of Contents
 
-- [Design](#design)
-    - [Database Model](#database-model)
+- [UI/UX](#uiux)
     - [Wireframes](#wireframes)
     - [Visual Design Choices](#visual-design-choices)
-    - [CRUD](#crud)
-
+    - [Site Goals](#site-goals)
+    - [User Stories](#user-stories)
+    
 - [Features](#features)
     - [Existing Features](#existing-features)
     - [Future Features](#possible-future-features)
-
-- [UX](#ux)
-    - [Site Goals](#site-goals)
-    - [User Stories](#user-stories)
+   
+- [Database Design](#database-design)
+    - [Database Model](#database-model)
+    - [CRUD](#crud)
 
 - [Testing](#testing)
     - [Fixed Bugs](#fixed-bugs)
@@ -28,7 +29,7 @@ This Django project is a little poetry blog that can turn into a call-and-respon
     - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
     
 
-## Design
+## UI/UX
 
 The overall design of the site is based on the Japanese principle of minimalism and therefore doesn't include a lot of visual variants and distractions.
 
@@ -36,11 +37,6 @@ The general layout, navigation and functionality is plain and intiutive, meeting
 
 Features and interactivity are kept to a minimum, as to not overwhelm the user with too many options and to maintain a zen like usage of the site.
 
-### Database Model
-
-The first draft of the entity relationship diagram does not include all models used in the final database.
-
-![ERD](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/ERD-with-tanka.jpg)
 
 ### Wireframes
 
@@ -64,7 +60,11 @@ Not all features and functions are covered by these first drafts. For a full lis
 
 **Colour Scheme:**
 
-In keeping with the minimalist style, the colour scheme utilises only one colour (and variants of different opacity). It is represented throughout the site in background images, navbar and footer.
+In keeping with the minimalist style, the colour scheme utilises only one colour (#E91C32). It is represented throughout the site in background images, navbar and footer. This color (see CSS custom property ``--primary-color``) originates from the "Koi-sun-wave haiku tile image" and was determined by using the Chrome extension color picker [ColorZilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp).
+
+![Primary colour](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670070285/woohoo_haiku/images/readme/primary-color.png)
+
+To set a background for the navbar and footer, an opacity of 0.6 was added to the primary color (see CSS custom property ``--p-color-opaque``).
 The exception are various call-to-action-buttons which follow the traditional signal colours.
 
 **Fonts:**
@@ -77,21 +77,9 @@ For full despcription of font names and their sources see [Media and Styling](#m
 All images used depict classic Japanese artistic elements such as koi, cherry blossom and finger waves.
 For full despcription of all images and their sources see [Media and Styling](#media-and-styling)
 
-### CRUD
+### Site Goals
 
-The CRUD principle was the heart of the design process for this project. For a detailed description of all CRUD features see [Features](#features)
-
-**Create:**
-An authenticated user can create and save a haiku entry.
-
-**Read:**
-A user can browse and read their own and other users' haiku entries.
-
-**Update:**
-An authenticated user can edit and update their own saved entries.
-
-**Delete:**
-An authenticated user can delete their own saved entries.
+### User Stories
 
 ## Features
 
@@ -115,11 +103,30 @@ Include like functionality for tanka extension. Allows users to rate which exten
 
 Write JS function that validates haiku format upon submission. Function will count syllables before each linebreak and insure submitted haiku matches the 5-7-5 pattern. This function could also be extended to confirm the 7-7 pattern for tankas.
 
-## UX
+## Database Design
 
-### Site Goals
+### Database Model
 
-### User Stories
+The database model diagram was designed using [Lucidchart](https://lucid.app/lucidchart/88f8fdd7-6949-48b7-a9a0-6e707d5e895c/edit?beaconFlowId=331535FA3078AF35&invitationId=inv_3c9d46e5-845a-48bf-85b4-52635aa019e8&page=0_0#).
+The first draft of the entity relationship diagram does not include all models used in the final database.
+
+![ERD](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/ERD-with-tanka.jpg)
+
+### CRUD
+
+The CRUD principle was the heart of the design process for this project. For a detailed description of all CRUD features see [Features](#features)
+
+**Create:**
+An authenticated user can create and save a haiku entry.
+
+**Read:**
+A user can browse and read their own and other users' haiku entries.
+
+**Update:**
+An authenticated user can edit and update their own saved entries.
+
+**Delete:**
+An authenticated user can delete their own saved entries.
 
 ## Testing
 
@@ -228,7 +235,7 @@ The code to add conditional pagination to the ``index`` template, including page
 
 *Cherry blossom background image:* [Alofipo | cleanpng.com](https://www.cleanpng.com/png-plum-blossom-red-plum-411432/download-png.html)
 
-*Koi-sun-wave haike tile image:* [pngegg.com](https://www.pngegg.com/en/png-vcqwe )
+*Koi-sun-wave haiku tile image:* [pngegg.com](https://www.pngegg.com/en/png-vcqwe )
 
 **Fonts:**
 
