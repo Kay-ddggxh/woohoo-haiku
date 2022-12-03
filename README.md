@@ -99,6 +99,22 @@ An authenticated user can delete their own saved entries.
 
 ### Possible Future Features
 
+**Image upload for user**
+
+Add file upload option to haiku form. Allow user to upload image that matches theme of created haiku. Set image as suttle background for haiku detail panel.
+
+**Music toggle**
+
+Include background music toggle switch. Music will be non-vocal and conducive to deep focus and creativity, i. e. chillstep, psy-ambient, futur garage.
+
+**Likes for tankas**
+
+Include like functionality for tanka extension. Allows users to rate which extensions work best for submitted haikus.
+
+**Syllable checker**
+
+Write JS function that validates haiku format upon submission. Function will count syllables before each linebreak and insure submitted haiku matches the 5-7-5 pattern. This function could also be extended to confirm the 7-7 pattern for tankas.
+
 ## UX
 
 ### Site Goals
