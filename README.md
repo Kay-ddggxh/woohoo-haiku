@@ -26,11 +26,18 @@ Much like a regular blog site, a registered user can submit posts, like and comm
     - [Python Libraries](#python-libraries)
     - [Django Libraries](#django-libraries)
     - [External Libraries](#external-libraries-and-applications)
-    - [Database](#database) !!! ToDo !!!
+    - [Database](#database) 
 
 - [Testing](#testing)
+    - [Test Guide](#test-guide)
+    - [Validator Testing](#validator-testing)
+    - [Browser Testing](#browser-testing)
     - [Fixed Bugs](#fixed-bugs)
     - [Unfixed Bugs](#unfixed-bugs)
+
+- [Deployment](#deployment)
+
+- [Development](#development)
 
 - [Source Credits](#source-credits)
     - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
@@ -163,7 +170,17 @@ An authenticated user can delete their own saved entries.
 
 ### Database
 
+- [ElephantSQL](https://www.elephantsql.com/) (PostgreSQL database hosting)
+
 ## Testing
+
+### Test Guide
+
+For extensive instructions on how to manually test this site and it's user stories, please refer to these [testing instructions](TESTING.md)
+
+### Validator Testing
+
+### Browser Testing
 
 ### Fixed bugs
 
@@ -233,6 +250,10 @@ An authenticated user can delete their own saved entries.
 ### Unfixed bugs
 
 There are currently no known bugs 😀
+
+## Deployment
+
+## Development
 
 ## Source Credits
 
