@@ -38,6 +38,9 @@ Much like a regular blog site, a registered user can submit posts, like and comm
 - [Deployment](#deployment)
 
 - [Development](#development)
+    - [Fork](#fork)
+    - [Clone](#clone)
+    - [Download ZIP](#download-as-zip)
 
 - [Source Credits](#source-credits)
     - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
@@ -254,6 +257,34 @@ There are currently no known bugs 😀
 ## Deployment
 
 ## Development
+
+The following options are available to work with this code or run in a local environment.
+
+### Fork
+
+Any changes made to a forked repository do not affect the original repository.
+
+- Log into GitHub and click on repository to download ([woohoo-haiku](https://github.com/Kathrin-ddggxh/woohoo-haiku))
+- Click the **Fork** buttonin the top right-hand corner
+- Select a different owner if necessary
+- Click **Create Fork**
+- The repo is now in your chosen account and can be cloned or changed
+
+### Clone
+
+Changes made to a cloned repository will affect the original one.
+
+- Navigate to the main page of the repostitory (this could be a forked instance)
+- Click on the **Code** dropdown menu above the list of files
+- Choose a method to copy the URL for the repository: either via **HTTPS**, by using an **SSH key**, or by using **GitHub CLI**
+- In your work environment, open Git Bash and change current directory to target location for cloned repository
+- Type ``git clone`` followed by the copied URL and press enter **Enter**
+
+### Download as ZIP
+
+- Log into GitHub and click on repository to download ([woohoo-haiku](https://github.com/Kathrin-ddggxh/woohoo-haiku))
+- Select **Code** and click "Download Zip" file
+- Once download is completed, extract ZIP file and use in your local environment
 
 ## Source Credits
 
