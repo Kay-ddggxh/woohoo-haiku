@@ -90,10 +90,11 @@ The exception are various call-to-action-buttons which follow the traditional si
 Fonts were chosen to convey Asian/Japanese visuals. 
 For full despcription of font names and their sources see [Media and Styling](#media-and-styling)
 
-**Images:**
+**Images and Icons:**
 
-All images used depict classic Japanese artistic elements such as koi, cherry blossom and finger waves.
-For full despcription of all images and their sources see [Media and Styling](#media-and-styling)
+All images and icons used depict classic Japanese artistic elements such as koi, cherry blossom and finger waves.
+The icons for the like-btn and the tanka counter were deliberately picked as something other than the classic heart and speech bubble icon to add originality to the design. 
+For full despcription of all images and their sources see [Media and Styling](#media-and-styling).
 
 ### Site Goals
 
@@ -184,6 +185,33 @@ For extensive instructions on how to manually test this site and it's user stori
 ### Validator Testing
 
 ### Browser Testing
+
+**Layout:** Testing layout and appearance of site for consistency throughout browsers.
+
+**Functionality:** 
+- Testing complete functionality of the site. This includes:
+    - Sign Up
+    - Login
+    - Logout
+    - External social media links
+    - Navigation
+    - Browse entries
+    - Filter entries by tag name
+    - Create new entry
+    - Like/unlike entries
+    - Comment/extend entries
+    - Delete and edit entries
+    - Admin user functions
+    
+- Ensuring all links, navigation and form submit functions as expected throughout browsers.
+
+| Browser     | Layout      | Functionality |
+| :---------: | :----------:| :-----------: |
+| Chrome      | ✔          | ✔             |
+| Edge        | ✔          | ✔             |
+| Firefox     | ✔          | ✔             |
+| Safari      | ✔          | ✔             |
+| IE          |deprecated by Microsoft, not tested|
 
 ### Fixed bugs
 

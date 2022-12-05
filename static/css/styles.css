@@ -38,8 +38,7 @@ body {
 }
 
 .background-img {
-    width: 100vw;
-    padding: 0 2vw;
+    padding: 0 5vw;
 }
 
 .background-img::before {
@@ -275,6 +274,7 @@ select {
 }
 
 .submit-btn,
+.auth-btn,
 .update-btn-group {
     width: fit-content;
     display: block;
