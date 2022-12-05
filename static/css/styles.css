@@ -210,6 +210,16 @@ footer {
 
 /* SignUp/Login/Logout styling */
 
+.auth-form>p {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-form>p>input {
+    margin: 0 0 0 1em;
+}
+
 .auth-form,
 .tanka-form {
     display: block;
