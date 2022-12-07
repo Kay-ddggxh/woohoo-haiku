@@ -9,8 +9,9 @@ Much like a regular blog site, a registered user can submit posts, like and comm
 
 - [UI/UX](#uiux)
     - [Wireframes](#wireframes)
-    - [Visual Design Choices](#visual-design-choices)
     - [Site Goals](#site-goals)
+    - [5 Planes of UX](#5-planes-of-ux)
+    - [Visual Design Choices](#visual-design-choices)
     - [User Stories](#user-stories)
     
 - [Features](#features)
@@ -73,6 +74,47 @@ Not all features and functions are covered by these first drafts. For a full lis
     <img src="https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/signup.jpg" alt="signup-wireframe">
 </details>
 
+### Site Goals
+
+The goal of this site is to provide the user with a very simple haiku sharing platform. User actions are delibertately limited. For example, the commenting is restricted (by admin approval) to only submit a tanka as extension of the original haiku post. This way it eliminates grounds for discussion and animosity - there are plenty of other sites out there to fulfill those needs. By the same token, there a no options to share on social media or links to any commercial sites encouraging consumerism.
+The online world also provides enough sensory overload as it is. Therefore the site does not make use of audio or too many varying images. However, both those could be considered during future development, provided it's in keeping with the site's sense of simplicity (see [Future Features](#possible-future-features)).
+To conlcude, the site is intended to foster calm and focus by letting the user get creative with words - nothing else.
+
+### 5 Planes of UX
+
+#### Strategy
+
+Addresses user's needs and product objectives.
+For this project, it was more a case of *un-addressing* the needs the rest of the web tries to meet - no buying-selling, no social media, no discussions and no excessive visual feed.
+The objective lies in creating a calm, creative space. Browsable content is kept on one simplistic level.
+
+#### Scope
+
+Addresses what functions and features are within the scope of the project.
+Minimal functionality was key to this project. This means that most features included are a basic requirement. Features like user sign up and login had to be implemented, as well as basic CRUD funtionality for authenticated users. For detailed explanation of all existing features see [Existing Features](#existing-features).
+Futures discussed under [Future Features](#possible-future-features), while still within the possible scope of this project, were deemed unnecessary at this point in time.
+
+#### Structure
+
+Defines how users can navigate the site and utilise all existing features.
+The structure of the site is modelled on a very basic blog site. Most simple blog pages online follow a similar template as this site.
+The structure allows users to visit the site, browse haikus and tanka extenstions and filter haikus by tagname. In order to contribute to the site in any way however, user authentication is required for which an account must be created.
+
+#### Skeleton
+
+Puts features defined in structure into navigational elements.
+For a first outline of the project skeleton see [Wireframes](#wireframes).
+To guarantee intuitive navigation of the site, both the navbar and the main content follow a standard layout pattern that should be familiar to most users.
+The navbar provides links to the main features and functions of the site, varying based on whether a user is authenticated or not. On small to medium screen sizes drop-down burger menu takes the place of the full navbar. A second-option home button is in place as a small logo, opposite all other nav links. According to research, this is also common practice.
+The main content is presented in a list view of haiku panels which link to the details and other functions of each haiku.
+Buttons and links are appropriately named. Clear and simple instructions as to how to use the page can be found in the relevant sections.
+A footer with social media links (currently merely serve as placeholders) completes the "framing" effect of the site.
+
+#### Surface
+
+Addresses visual design and how to convey desired emotions and achieve desired effects.
+For more detail on the planning of the surface plane, see [Visual Design Choices](#visual-design-choices).
+
 
 ### Visual Design Choices
 
@@ -95,8 +137,6 @@ For full despcription of font names and their sources see [Media and Styling](#m
 All images and icons used depict classic Japanese artistic elements such as koi, cherry blossom and finger waves.
 The icons for the like-btn and the tanka counter were deliberately picked as something other than the classic heart and speech bubble icon to add originality to the design. 
 For full despcription of all images and their sources see [Media and Styling](#media-and-styling).
-
-### Site Goals
 
 ### User Stories
 
