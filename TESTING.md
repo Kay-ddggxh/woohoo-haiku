@@ -118,16 +118,35 @@ Signing into existing account (authenticated users only).
 
 ## Logout
 
+Allows user to sign out of existing account (authenticated users only).
+
 | Feature | Action                             | Expected Result                 |
 | :-----: | :---------------------------------:| :------------------------------:|
 | **Logout form** | When authenticated, go to Logout page via nav link | User is directed to Logout page, asking user to confirm action. |
 | **Sign Out** | On Logout page, click "Sign Out". | Self-closing message informs user of successfull logout. User is re-directed to homepage and navigation shows links for unauthenticated users. |
 
-## Commenting
+## Commenting (tanka extensions)
+
+Option to add a tanka extension to own or other users' haikus (authenticated users only.)
+
+| Feature | Action                             | Expected Result                 |
+| :-----: | :---------------------------------:| :------------------------------:|
+| **Submit tanka** | In haiku detail view, scroll down to tanka instructions and blank textfield input. Write tanka according to instructions. Click "Submit". | At the bottom of page, message informs user that submitted tanka awaits approval. Tanka will not be displayed until site admin has approved it. |
+| **Tanka count** | Find tanka counter on haiku panel, both on homepage and in haiku details. | Number on counter matches all displayed tankas. This does not include tankas that are awaiting approval. |
+| **View tankas** | After submitting tanka, wait for admin approval. | Once admin has approved submission, tanka (including author) can now be read below haiku detail view. |
 
 ## Liking
 
+Option to like/unlike haikus (authenticated users only).
+
+| Feature | Action                             | Expected Result                 |
+| :-----: | :---------------------------------:| :------------------------------:|
+| **Like** | In haiku detail view, click like button (blossom icon) below haiku body of haiku that isn't already liked. | Icon color changes from black to red. Like count is incremented by 1. |
+| **Unlike** | In haiku detail view, click like button (blossom icon) below haiku body of haiku that is already liked. | Icon color changes from red to black. Like count is decremented by 1. |
+
 ## Social Links
+
+Links to social media sites located in footer (available to all users).
 
 | Feature | Action                             | Expected Result                 |
 | :-----: | :---------------------------------:| :------------------------------:|
