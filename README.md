@@ -144,6 +144,139 @@ For full despcription of all images and their sources see [Media and Styling](#m
 
 ### Existing Features
 
+#### Navigation
+
+- Navbar with icon and nav links
+- Different links visible for authenticated and unauthenticated users
+- Active link rendered black instead of default white
+- Collapsible burger menu with drop-down on small to medium screens
+
+![navbar](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691698/woohoo_haiku/images/readme/features/nav-unauth.png)
+
+![navbar logged in](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691698/woohoo_haiku/images/readme/features/navbar.png)
+
+![burger menu](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691698/woohoo_haiku/images/readme/features/nav-burger.png)
+
+#### Site introduction
+
+- Introductory paragraph at top of home page
+- Explains to user what site is about and how use and navigate it
+- Links "Sign Up" and "Create Page" inside paragraph are clickable depending on user authentication
+
+![site intro](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691699/woohoo_haiku/images/readme/features/site-intro.png)
+
+#### Haiku list
+
+- Paginated list view of haikus on home page
+- Haiku panels serve as links to haiku details
+- Panel shows title, author, tagname, number of likes and number of added tankas
+
+![haiku-list](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691698/woohoo_haiku/images/readme/features/haiku-list-view.png)
+
+#### Filter buttons
+
+- Button group on homepage listing all available tagnames
+- "All haikus" button acts as delete filters
+
+![filter button group](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/filter-btns.png)
+
+#### Filtered haikus
+
+- List view of all haikus with the same tagname
+- Default message displays if no haikus with selected tag exist
+
+![filtered haikus](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/filter-result.png)
+
+![no filter result message](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691699/woohoo_haiku/images/readme/features/no-tags.png)
+
+#### My haikus
+
+- Renders list of haikus only submitted by currently authenticated user
+- Default message displays if user has not submitted any haikus yet
+
+![user haikus](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691699/woohoo_haiku/images/readme/features/user-haikus.png)
+
+![no user haikus message](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691698/woohoo_haiku/images/readme/features/no-user-haikus.png)
+
+#### Haiku details
+
+- Renders body of individual haiku on seperate page
+- Displays title, tagname, author, content, number of likes and number of tankas
+- If user is authenticated, "Edit" and "Delete" buttons are rendered below haiku
+
+![haiku details](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/haiku-detail.png)
+
+#### Create haiku
+
+- Form to write and submit haiku renders on seperate page
+- Form contains fields for title (textfield), tag (select drop-down) and content (textfield)
+- All fields are required and submission will not succeed unless form is completed
+- Includes instructions on how to write haiku above input fields
+
+![haiku instructions](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691698/woohoo_haiku/images/readme/features/haiku-instructions.png)
+
+![haiku form](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/haiku-form.png)
+
+#### Tankas
+
+- Displays list of all admin approved tanka extenstions below haiku details
+- If no tankas have been added yet, default message displays
+
+![added tankas](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691699/woohoo_haiku/images/readme/features/tankas.png)
+
+![no tankas](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691699/woohoo_haiku/images/readme/features/no-tankas.png)
+
+#### Tanka form
+
+- Only visible to authenticated users
+- Includes instructions on how to extend haiku into tanka
+- Located below haiku detail and existing tanka extensions
+- Submission requires admin approval and will not be displayed until approved
+
+![tanka form](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691699/woohoo_haiku/images/readme/features/tanka-form.png)
+
+#### Edit haiku
+
+- Only accessible by authenticated user who is author of selected haiku
+- Form prepopulated by selected haiku content
+- All fields are required and submission will not succeed unless form is completed
+
+![edit form](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/edit-form.png)
+
+#### Delete haiku
+
+- Only accessible by authenticated user who is author of selected haiku
+- Renders seperate page that prompts user to confirm action to delete haiku
+
+![delete page](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/delete-page.png)
+
+#### Sign Up
+
+- Allows user to create account
+- Fields include Username, Email (optional), Password and Password confirmation
+
+![sign up page](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/login.png)
+
+#### Login
+
+- Login form asking for username and password of signed up user
+- Includes "Remember me" checkbox option
+
+![login page](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/login.png)
+
+#### Logout
+
+- Seperate page prompts user to confirm action to sign out.
+
+![sign out page](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691698/woohoo_haiku/images/readme/features/logout.png)
+
+#### Footer
+
+- Footer with social medial icon links
+- Links open in seperate tabs
+
+![footer](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/footer.png)
+
 ### Possible Future Features
 
 **Image upload for user**
