@@ -12,9 +12,9 @@
     - [Update](#update)
     - [Delete](#delete)
 
-- [Login](#login)
-
 - [Sign Up](#sign-up)
+
+- [Login](#login)
 
 - [Logout](#logout)
 
@@ -95,11 +95,33 @@ Option to delete existing haikus via haiku detail view (authenticated users only
 | **Confirm Delete** | On delete page, click "Delete". | User is re-directed to homepage, selected haiku has been deleted. |
 | **Cancel** | On delete page, click "Cancel". | User is re-directed to homepage with no delete action taken. |
 
-## Login
-
 ## Sign Up
 
+Account creation for unauthenticated users.
+
+| Feature | Action                             | Expected Result                 |
+| :-----: | :---------------------------------:| :------------------------------:|
+| **Sign Up form** | Go to Sign Up page via nav link | Renders form input fields Username, Email (optional), Password, Password (confirm). |
+| **Submit** | Fill in form fields accordingly. Click "Sign Up". | Self-closing message informs user of successfull account creation, including username. User is re-directed to homepage and navigation shows links for authenticated users. |
+| **Incomplete form** | Failing to fill out all form fields, click "Sign Up". | User remains on Sign Up form view and is prompted to complete missing fields. |
+
+## Login
+
+Signing into existing account (authenticated users only).
+
+| Feature | Action                             | Expected Result                 |
+| :-----: | :---------------------------------:| :------------------------------:|
+| **Login form** | Go to Login page via nav link | Renders form input fields Username, Password, Remember me (checkbox). |
+| **Submit** | Fill in form fields accordingly. Click "Sign In". | Self-closing message informs user of successfull login, including username. User is re-directed to homepage and navigation shows links for authenticated users. |
+| **Incomplete form** | Failing to fill out all form fields, click "Sign In". | User remains on Sign Up form view and is prompted to complete missing fields. |
+| **Remember me** | When signing in, tick "Remember me". Logout and sign in again. | Login form is pre-populated with username and hidden password. |
+
 ## Logout
+
+| Feature | Action                             | Expected Result                 |
+| :-----: | :---------------------------------:| :------------------------------:|
+| **Logout form** | When authenticated, go to Logout page via nav link | User is directed to Logout page, asking user to confirm action. |
+| **Sign Out** | On Logout page, click "Sign Out". | Self-closing message informs user of successfull logout. User is re-directed to homepage and navigation shows links for unauthenticated users. |
 
 ## Commenting
 
