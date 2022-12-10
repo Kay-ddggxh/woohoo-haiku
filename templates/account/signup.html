@@ -9,7 +9,7 @@
 
 
 <form class="signup auth-form" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+  <p>{% blocktrans %}Already have an account? Then please<a href="{{ login_url }}">&nbsp;sign in</a>.{% endblocktrans %}</p>
   {% csrf_token %}
   {{ form.as_p }}
   {% if redirect_field_value %}

@@ -7,7 +7,12 @@
     images via verbal means? Then this little site is for you. <br>
     Here you can write your own haikus, read other's and even join in their creative process by 
     extending their haikus into a tanka in a call-and-response fashion. Just 
-    <a href="{% url 'account_signup' %}">Sign Up</a> and you're good to go.<br>
+    {% if user.is_authenticated %}
+    Sign Up 
+    {% else %}
+    <a href="{% url 'account_signup' %}">Sign Up</a>
+    {% endif %}
+     and you're good to go.<br>
     Not familiar with haikus and tanka formats? No worries. Once you're logged in you can head over to the 
     {% if user.is_authenticated %}
     <a href="{% url 'create_haiku' %}">Create page</a>
