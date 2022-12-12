@@ -120,7 +120,7 @@ class UpdateHaiku(UpdateView):
     template_name = 'update_haiku.html'
     success_url = reverse_lazy('home')
 
-    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
+    # Source: https://stackoverflow.com/a/67366233
     def form_valid(self, form):
         form.instance.author = self.request.user
         msg = "Your haiku has been updated successfully"
@@ -136,6 +136,12 @@ class DeleteHaiku(DeleteView):
     model = Haiku
     template_name = 'delete_haiku.html'
     success_url = reverse_lazy('home')
+
+    # Source: https://stackoverflow.com/a/25325228
+    def delete(self, request, *args, **kwargs):
+        msg = "Your haiku has been deleted"
+        messages.add_message(self.request, messages.SUCCESS, msg)
+        return super(DeleteView, self).delete(request, *args, **kwargs)
 
 
 class TagList(View):

@@ -92,7 +92,7 @@ Option to delete existing haikus via haiku detail view (authenticated users only
 | :-----: | :---------------------------------:| :------------------------------:|
 | **User match** | On homepage, click haiku submitted by different user. | Haiku detail view does not show delete button to ensure users can only delete their own haikus. |
 | **Delete-Btn** | From haiku detail view, click delete button below haiku body. Button is only visible after loggin. | User is directed to delete page which prompts user to confirm delete action. |
-| **Confirm Delete** | On delete page, click "Delete". | User is re-directed to homepage, selected haiku has been deleted. |
+| **Confirm Delete** | On delete page, click "Delete". | Alert message informs user of successful deletion. User is re-directed to homepage, selected haiku has been deleted. |
 | **Cancel** | On delete page, click "Cancel". | User is re-directed to homepage with no delete action taken. |
 
 ## Sign Up
