@@ -413,7 +413,8 @@ For extensive instructions on how to manually test this site and it's user stori
 
     **Fix**:
 
-    Include ``{% if forloop.first %}`` statement to insure message is only displayed after the first iteration of the for loop ([Reference](https://stackoverflow.com/a/46927971)).
+    Move conditional statement that compares user ID to haiku author ID to view level. Initially this was done with an if statement inside the forloop in the template. However, this seemed to prevent the ``{% empty %}`` option of a Django forloop from working. By moving the conidition test into a method ``def get_queryset(self)`` inside the ``UserHaikus`` view, ``{% empty %}`` can now be used in the template forloop to check if the list of objects is empty.
+    ([Reference](https://www.geeksforgeeks.org/for-empty-loop-django-template-tags/))
 
 
 - **Tanka count on homepage**:

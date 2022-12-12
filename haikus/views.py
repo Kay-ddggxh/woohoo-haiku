@@ -8,6 +8,9 @@ from .forms import HaikuForm, TankaForm
 
 
 class HaikuList(generic.ListView):
+    """
+    Renders all objects of Haiku model as list
+    """
     model = Haiku
     queryset = Haiku.objects.order_by('-create_date')
     template_name = 'index.html'
@@ -74,7 +77,9 @@ class HaikuDetail(View):
 
 
 class HaikuLike(View):
-
+    """
+    Allows user to like/unlike haikus
+    """
     def post(self, request, slug):
         haiku = get_object_or_404(Haiku, slug=slug)
 
@@ -128,7 +133,7 @@ class DeleteHaiku(DeleteView):
 
 class TagList(View):
     """
-    view to filter haikus by specific tags
+    View to filter haikus by specific tags
     """
     def get(self, request, tag):
         tag_haikus = Haiku.objects.filter(tag__tagname=self.kwargs['tag'])
@@ -148,5 +153,9 @@ class UserHaikus(generic.ListView):
     currently authenticated user
     """
     model = Haiku
-    queryset = Haiku.objects.order_by('-create_date')
     template_name = 'user_haikus.html'
+
+    def get_queryset(self):
+        queryset = Haiku.objects.filter(
+            author__id=self.request.user.id).order_by('-create_date')
+        return queryset
