@@ -21,10 +21,9 @@
         else. Have fun!
     </p>
         
-
     <!-- Haiku submission form -->
-    <form method="POST" class="haiku-form">
-        
+    {% include 'messages.html' %}
+    <form method="POST" class="haiku-form">   
         {% csrf_token %}
         {{ form.as_p | safe }}
         <button type="submit" class="submit-btn">Submit</button>

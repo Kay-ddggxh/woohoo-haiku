@@ -60,7 +60,7 @@ Write and submit a haiku via haiku submit form (authenticated users only).
 | **Title field** | Select field with placeholder "Enter a title" and start typing. | Placeholder disappears, title shows instead. Typing is disabled after 100 characters. |
 | **Tag drop-down** | Click "Tag your haiku" drop-down menu and select tagname. | Shows all available tag options. Placeholder is not selectable. Selected options displays after closing drop-down. |
 | **Content field** | Select field with placeholder "Write haiku here" and start typing. | Placeholder disappears, written text displays. |
-| **Submit** | After completing haiku form, click submit button. | User is re-directed to homepage with the newly submitted haiku showing top of the list. |
+| **Submit** | After completing haiku form, click submit button. | Alert message informs user of successful submission. User is re-directed to homepage with the newly submitted haiku showing top of the list. |
 | **Incomplete form** | Failing to fill out all form fields, click submit button. | User remains on "Create" page and is prompted to complete missing fields. |
 
 ### Read
@@ -81,7 +81,7 @@ Option to edit existing haikus via haiku detail view (authenticated users only).
 | **User match** | On homepage, click haiku submitted by different user. | Haiku detail view does not show edit button to ensure users can only update their own haikus. |
 | **Edit-Btn** | From haiku detail view, click edit button below haiku body. Button is only visible after loggin. | Renders haiku edit form with title and content field pre-populated by original post. |
 | **Cancel** | Below edit form, click "Cancel". | User is redirected to homepage with no action taken. |
-| **Submit** | Alter form input according to desired update. Click edit button below form. | User is re-directed to homepage with the newly edited haiku showing top of the list. |
+| **Submit** | Alter form input according to desired update. Click edit button below form. | Alert message informs user of successful update. User is re-directed to homepage with the newly edited haiku showing top of the list. |
 | **Incomplete form** | Failing to fill out all form fields, click edit button. | User remains on edit form view and is prompted to complete missing fields. |
 
 ### Delete

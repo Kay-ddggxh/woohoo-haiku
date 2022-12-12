@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
+from django.contrib import messages
 from .models import Haiku, Tanka, Tag
 from .forms import HaikuForm, TankaForm
 
@@ -47,7 +48,7 @@ class HaikuDetail(View):
     def post(self, request, slug, *args, **kwargs):
         queryset = Haiku.objects
         haiku = get_object_or_404(queryset, slug=slug)
-        tankas = haiku.tankas.order_by('create_date')  # filter by approval
+        tankas = haiku.tankas.order_by('create_date')
         liked = False
         if haiku.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -101,8 +102,11 @@ class CreateHaiku(CreateView):
     template_name = 'create_haiku.html'
     success_url = reverse_lazy('home')
 
+    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
     def form_valid(self, form):
         form.instance.author = self.request.user
+        msg = "Your haiku was submitted successfully"
+        messages.add_message(self.request, messages.SUCCESS, msg)
         return super(CreateView, self).form_valid(form)
 
 
@@ -116,8 +120,11 @@ class UpdateHaiku(UpdateView):
     template_name = 'update_haiku.html'
     success_url = reverse_lazy('home')
 
+    # Source: https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post # noqa
     def form_valid(self, form):
         form.instance.author = self.request.user
+        msg = "Your haiku has been updated successfully"
+        messages.add_message(self.request, messages.SUCCESS, msg)
         return super(UpdateView, self).form_valid(form)
 
 

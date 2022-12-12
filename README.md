@@ -582,6 +582,10 @@ For further guidance on syntax and implementation of features I also referred to
 
 The view that enables an authenticated user to add and save their own haiku was created using Django's [CreateView method](https://docs.djangoproject.com/en/4.1/ref/class-based-views/generic-editing/#django.views.generic.edit.CreateView)
 
+**Form submit feedback**:
+
+To display a self-closing feedback message to the user after submitting a form, I used the this [StackOverflow article](https://stackoverflow.com/questions/67366138/django-display-message-after-creating-a-post) as reference.
+
 **Form Customisation**:
 
 Form customisation was achieved using [Django Widgets](https://docs.djangoproject.com/en/dev/ref/forms/widgets/). 
