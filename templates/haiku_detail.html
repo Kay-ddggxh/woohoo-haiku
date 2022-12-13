@@ -2,11 +2,11 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<h2>Read <br />"{{ haiku.title }}"</h2>
+<h2>Read <br>"{{ haiku.title }}"</h2>
 <!-- Haiku content -->
 <p class="tag-label fw-bold">{{ haiku.tag }}</p>
 <p>by {{ haiku.author }}</p>
-<article class="haiku-content">{{ haiku.content | safe | linebreaks }}
+<div class="haiku-content">{{ haiku.content | safe | linebreaks }}
 
     <!-- Like functionality -->
     <div class="like-haiku">
@@ -35,7 +35,7 @@
         </span>
     </div>
 
-</article>
+</div>
 
 <!-- Edit/Delete haiku functionality -->
 {% if user.id == haiku.author.id %}
@@ -83,7 +83,7 @@
                 So give it a try!
             </p>
             <form method="post" class="tanka-form">
-                {{ tanka_form | safe }}
+                {{ tanka_form | crispy }}
                 {% csrf_token %}
                 <button type="submit" class="submit-btn">Submit</button>
             </form>

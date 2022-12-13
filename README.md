@@ -3,16 +3,18 @@
 This Django project is a little poetry blog that can turn into a call-and-response game through user interaction. The main value in it lies to provide fun to those who enjoy poetry, haiku or just playing with words.
 Much like a regular blog site, a registered user can submit posts, like and comment on other users' posts. However, the posts and comments are meant to follow the [Haiku/Tanka format](https://poetry4kids.com/lessons/how-to-write-a-tanka-poem/). Thus, the original post will be a haiku. Other users can then add two more lines to extend it into a tanka, whilst trying to capture and maintain the feel of the original post and understand the authors subject and intent.
 
+![responsive mockup](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670925613/woohoo_haiku/images/readme/mockup.png)
+
 [Link to live site](https://woohoo-haiku.herokuapp.com/) 
 
 ## Table of Contents
 
 - [UI/UX](#uiux)
+    - [Agile](#agile)
     - [Wireframes](#wireframes)
     - [Site Goals](#site-goals)
     - [5 Planes of UX](#5-planes-of-ux)
     - [Visual Design Choices](#visual-design-choices)
-    - [User Stories](#user-stories)
     
 - [Features](#features)
     - [Existing Features](#existing-features)
@@ -55,6 +57,13 @@ The general layout, navigation and functionality is plain and intiutive, meeting
 
 Features and interactivity are kept to a minimum, as to not overwhelm the user with too many options and to maintain a zen like usage of the site.
 
+
+### Agile
+
+This project was designed and built using the agile approach. Right from the initial planning through to final development. To help visualise the process I created a [GitHub project](https://github.com/users/Kathrin-ddggxh/projects/6) and utilised the provided Kanban board method to split project elements into user stories and manageable tasks.
+
+To view all user stories including their required acceptance criterias and tasks, refer the project linked to above.
+Each story also has been tagged with a label to signify how crucial a particular feature is to the overall workings and acceptability of the site.
 
 ### Wireframes
 
@@ -138,7 +147,6 @@ All images and icons used depict classic Japanese artistic elements such as koi,
 The icons for the like-btn and the tanka counter were deliberately picked as something other than the classic heart and speech bubble icon to add originality to the design. 
 For full despcription of all images and their sources see [Media and Styling](#media-and-styling).
 
-### User Stories
 
 ## Features
 
@@ -357,6 +365,58 @@ An authenticated user can delete their own saved entries.
 For extensive instructions on how to manually test this site and it's user stories, please refer to these [testing instructions](TESTING.md)
 
 ### Validator Testing
+
+#### HTML [W3C validator](https://validator.w3.org/)
+
+As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.
+
+**Home page**
+
+No errors or warnings to show.
+
+**My Haikus page**
+
+No errors or warnings to show.
+
+**Create page**
+
+No errors or warnings to show.
+
+**Tag selection page**
+
+No errors or warnings to show.
+
+**Haiku details page**
+
+1 info, 1 warning, 6 errors.
+
+![haiku details html validation result](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670930603/woohoo_haiku/images/readme/validation_imgs/create-haiku-html-errors.png)
+
+*Fix:*
+
+- Remove trailing slash from ``<br />``.
+- Change ``<article>`` element into ``<div>`` element as "article" did not contribute much to semantics and accessibility. 
+- Render form in template using ``{{ tanka_form | crispy }}`` instead of ``{{ tanka_form | safe }}`` as this caused Django to insert table elements. CSS adjustments were needed to re-style tanka form.
+
+**Edit Haiku page**
+
+No errors or warnings to show.
+
+**Delete Haiku page**
+
+No errors or warnings to show.
+
+**Sign Up page**
+
+No errors or warnings to show.
+
+**Login page**
+
+No errors or warnings to show.
+
+**Sign Out page**
+
+No errors or warnings to show.
 
 ### Browser Testing
 

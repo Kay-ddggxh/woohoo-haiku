@@ -250,7 +250,7 @@ select {
     flex-direction: column;
 }
 
-.tanka-form>textarea,
+.tanka-form textarea,
 .haiku-form textarea,
 .haiku-form input,
 .haiku-form select,
@@ -278,7 +278,7 @@ select {
     width: 100% !important;
 }
 
-.tanka-form>label,
+.tanka-form label,
 .haiku-form label {
     display: none;
 }
