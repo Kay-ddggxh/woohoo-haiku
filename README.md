@@ -484,7 +484,16 @@ All clear, no errors found
   Referring to ``label`` element of haiku form and tanka form
 
   *Fix*: Change element styling from ``display: none`` to ``display: block`` and ``visibility: hidden``
-  
+
+#### Performance, Accessibility, SEO, Best Practices (Lighthouse Chrome DevTools)
+
+**Desktop results**
+
+![lighthouse results desktop](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670947422/woohoo_haiku/images/readme/validation_imgs/lighthouse-results-desktop.png)
+
+**Mobile results**
+
+![lighthouse results mobile](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670947483/woohoo_haiku/images/readme/validation_imgs/lighthouse-result-mobile.png)
 
 ### Browser Testing
 
