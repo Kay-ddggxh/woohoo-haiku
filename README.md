@@ -418,6 +418,21 @@ No errors or warnings to show.
 
 No errors or warnings to show.
 
+#### CSS [Jigsaw](https://jigsaw.w3.org/css-validator/)
+
+No error found.
+
+![jigsaw result](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670932703/woohoo_haiku/images/readme/validation_imgs/css-jigsaw-result.png)
+
+#### JavaScript 
+
+1 undefined variable: bootstrap. 
+Referring to line 122 in base.html ``let alert = new bootstrap.Alert(msg)``
+
+*Fix:*
+
+No action required as this is a custom bootstrap variable and did not need to be defined inside the script.
+
 ### Browser Testing
 
 **Layout:** Testing layout and appearance of site for consistency throughout browsers.

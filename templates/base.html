@@ -116,12 +116,15 @@
     </footer>
 
     <!-- Timeout function for alert messages -->
+    <!-- Source: CodeInstitute,
+        https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/templates/base.html#:~:text=%3Cscript%3E,%3C/script%3E
+    -->
     <script>
         setTimeout(function() {
             let msg = document.getElementById("alert-msg");
             let alert = new bootstrap.Alert(msg);
             alert.close();
-        }, 3000)
+        }, 3000);
     </script>
     
     <!-- Add placeholder attributes to 1st option in tag select field -->
