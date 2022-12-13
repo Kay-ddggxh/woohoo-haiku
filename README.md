@@ -493,7 +493,7 @@ All clear, no errors found
 
 **Mobile results**
 
-![lighthouse results mobile](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670947483/woohoo_haiku/images/readme/validation_imgs/lighthouse-result-mobile.png)
+![lighthouse results mobile](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670947905/woohoo_haiku/images/readme/validation_imgs/lighthouse-result-mobile.png)
 
 ### Browser Testing
 
