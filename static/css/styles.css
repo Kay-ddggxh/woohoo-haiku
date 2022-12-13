@@ -51,7 +51,7 @@ body {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.1;
+    opacity: 0.08;
     z-index: -1;
 }
 
@@ -280,7 +280,8 @@ select {
 
 .tanka-form label,
 .haiku-form label {
-    display: none;
+    display: block;
+    visibility: hidden;
 }
 
 .submit-btn,

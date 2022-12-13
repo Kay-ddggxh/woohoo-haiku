@@ -14,7 +14,7 @@
         <form class="like-form" action="{% url 'haiku_like' haiku.slug %}" method="post">
             {% csrf_token %}
             {% if liked %}
-                <button type="submit" name="haiku_id" value="{{ post.slug }}" class="like-btn">
+                <button type="submit" name="haiku_id" value="{{ post.slug }}" class="like-btn" aria-label="like-button">
                     <iconify-icon inline icon="emojione:cherry-blossom"></iconify-icon>
                 </button>
             {% else %}

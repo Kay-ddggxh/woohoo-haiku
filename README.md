@@ -465,6 +465,27 @@ All clear, no errors found
 
 All clear, no errors found
 
+#### Accessibility [axe DevTools Chrome Extension](https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
+
+20 issues.
+
+- Elements must have sufficient color contrast (17, Needs Review)
+
+  *Fix*: Change opacity of ``.background-img::before`` to 0.08
+
+- Buttons must have discernible text (1, Critical)
+
+  Referring to line 17 in haiku_detail.html 
+
+  *Fix*: Add ``aria-label="like-button"`` to button element
+
+- Form elements must have labels (2, Critical)
+
+  Referring to ``label`` element of haiku form and tanka form
+
+  *Fix*: Change element styling from ``display: none`` to ``display: block`` and ``visibility: hidden``
+  
+
 ### Browser Testing
 
 **Layout:** Testing layout and appearance of site for consistency throughout browsers.
