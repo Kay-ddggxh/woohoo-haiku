@@ -424,7 +424,7 @@ No error found.
 
 ![jigsaw result](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670932703/woohoo_haiku/images/readme/validation_imgs/css-jigsaw-result.png)
 
-#### JavaScript 
+#### JavaScript [JSHint](https://jshint.com/) 
 
 1 undefined variable: bootstrap. 
 Referring to line 122 in base.html ``let alert = new bootstrap.Alert(msg)``
@@ -432,6 +432,38 @@ Referring to line 122 in base.html ``let alert = new bootstrap.Alert(msg)``
 *Fix:*
 
 No action required as this is a custom bootstrap variable and did not need to be defined inside the script.
+
+#### Python [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+Only files with custom written python code have been verified with the above validator.
+
+**admin.py**
+
+All clear, no errors found
+
+**forms.py**
+
+All clear, no errors found
+
+**models.py**
+
+All clear, no errors found
+
+**haikus/urls.py**
+
+All clear, no errors found
+
+**views.py**
+
+All clear, no errors found
+
+**settings.py**
+
+All clear, no errors found
+
+**woohoo_haiku/urls.py**
+
+All clear, no errors found
 
 ### Browser Testing
 
