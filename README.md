@@ -22,6 +22,7 @@ Much like a regular blog site, a registered user can submit posts, like and comm
    
 - [Database Design](#database-design)
     - [Database Model](#database-model)
+    - [Custom Model](#custom-model)
     - [CRUD](#crud)
 
 - [Technologies Used](#technologies-used)
@@ -47,6 +48,7 @@ Much like a regular blog site, a registered user can submit posts, like and comm
 
 - [Source Credits](#source-credits)
     - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
+    - [Media and Styling](#media-and-styling)
     
 
 ## UI/UX
@@ -312,6 +314,12 @@ The first draft of the entity relationship diagram does not include all models u
 
 ![ERD](https://res.cloudinary.com/kay-ddggxh/image/upload/v1669304695/woohoo_haiku/images/readme/wireframes_erd/ERD-with-tanka.jpg)
 
+### Custom Model
+
+Both models ``Haiku`` and ``Tanka`` are based on a simple blog tutorial project by Code Institute (see [Credits](#referencesdocumentationtutorials) for reference). However, the models have been altered to fit the needs of this project better. This includes reducing the amount of fields in both models, as well as adding helper methods (``def approved_tankas``, ``def save``) to aid certain functions of the site.
+
+As required by the assessment criteria for this project, one custom model (the ``Tag`` model) was added which was not covered by Code Institute's tutorial.
+
 ### CRUD
 
 The CRUD principle was the heart of the design process for this project. For a detailed description of all CRUD features see [Features](#features)
@@ -429,6 +437,8 @@ No error found.
 1 undefined variable: bootstrap. 
 Referring to line 122 in base.html ``let alert = new bootstrap.Alert(msg)``
 
+![jshint result](https://res.cloudinary.com/kay-ddggxh/image/upload/v1671020200/woohoo_haiku/images/readme/validation_imgs/jshint-result.png)
+
 *Fix:*
 
 No action required as this is a custom bootstrap variable and did not need to be defined inside the script.
@@ -436,6 +446,9 @@ No action required as this is a custom bootstrap variable and did not need to be
 #### Python [CI Python Linter](https://pep8ci.herokuapp.com/)
 
 Only files with custom written python code have been verified with the above validator.
+All files yielded the same result. See image of test results for models.py as example output.
+
+![python linter result](https://res.cloudinary.com/kay-ddggxh/image/upload/v1671020398/woohoo_haiku/images/readme/validation_imgs/python-linter-result.png)
 
 **admin.py**
 
@@ -712,7 +725,7 @@ Changes made to a cloned repository will affect the original one.
 **General**:
 
 The official [Django Documentation](https://docs.djangoproject.com/en/4.1/) was used throughout creating this project.
-The skeleton of this project is based on the [Code Institute](https://codeinstitute.net/ie/) tutorials "Hello Django" and "I Think Therefore I Blog".
+The skeleton of this project is based on the [Code Institute](https://codeinstitute.net/ie/) tutorials ["Hello Django"](https://github.com/ckz8780/ci-fsf-hello-django/tree/c13b414fd2e87a54b4f2788ceffec55be4ade925) and ["I Think Therefore I Blog"](https://github.com/Code-Institute-Solutions/Django3blog).
 For further guidance on syntax and implementation of features I also referred to [Codemy Django tutorials](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&ab_channel=Codemy.com) and [Very Academy tutorials](https://www.youtube.com/c/veryacademy/playlists)
 
 **CreateHaiku View**:

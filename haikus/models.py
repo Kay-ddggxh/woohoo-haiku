@@ -13,6 +13,7 @@ class Tag(models.Model):
         return self.tagname
 
 
+# Source: https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/blog/models.py#:~:text=class%20Post(,.count() # noqa
 class Haiku(models.Model):
     """
     Defines Haiku object
@@ -55,6 +56,7 @@ class Haiku(models.Model):
         super(Haiku, self).save(*args, **kwargs)
 
 
+# Source: https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/blog/models.py#:~:text=class%20Comment(,name%7D%22  # noqa
 class Tanka(models.Model):
     """
     Defines Tanka object
