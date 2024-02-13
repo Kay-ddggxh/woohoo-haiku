@@ -5,7 +5,13 @@ Much like a regular blog site, a registered user can submit posts, like and comm
 
 ![responsive mockup](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670925613/woohoo_haiku/images/readme/mockup.png)
 
-[Link to live site](https://woohoo-haiku.herokuapp.com/) 
+[Link to live site](https://woohoo-haiku-v1-2-bce090364970.herokuapp.com/) 
+
+## Information Update !
+
+Due to the original live site failing, this project was re-deployed from a [different repository](https://github.com/Kay-ddggxh/woohoo-haiku_v1.2).
+The code in the above repository was slightly altered from the original project.
+The code as assessed and graded by Code Institute (Merit grade) remains unchanged in this current repository. However, the code corresponding to the live site can be found [here](https://github.com/Kay-ddggxh/woohoo-haiku_v1.2).
 
 ## Table of Contents
 
@@ -62,7 +68,7 @@ Features and interactivity are kept to a minimum, as to not overwhelm the user w
 
 ### Agile
 
-This project was designed and built using the agile approach. Right from the initial planning through to final development. To help visualise the process I created a [GitHub project](https://github.com/users/Kathrin-ddggxh/projects/6) and utilised the provided Kanban board method to split project elements into user stories and manageable tasks.
+This project was designed and built using the agile approach. Right from the initial planning through to final development. To help visualise the process I created a [GitHub project](https://github.com/users/Kay-ddggxh/projects/6) and utilised the provided Kanban board method to split project elements into user stories and manageable tasks.
 
 To view all user stories including their required acceptance criterias and tasks, refer the project linked to above.
 Each story also has been tagged with a label to signify how crucial a particular feature is to the overall workings and acceptability of the site.
@@ -265,7 +271,7 @@ For full despcription of all images and their sources see [Media and Styling](#m
 - Allows user to create account
 - Fields include Username, Email (optional), Password and Password confirmation
 
-![sign up page](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691697/woohoo_haiku/images/readme/features/login.png)
+![sign up page](https://res.cloudinary.com/kay-ddggxh/image/upload/v1670691698/woohoo_haiku/images/readme/features/signup.png)
 
 #### Login
 
